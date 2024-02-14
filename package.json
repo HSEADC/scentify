@@ -1,16 +1,9 @@
 {
   "name": "static-site-boilerplate",
   "version": "1.0.0",
-  "author": "Zakhar Day",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https:///github.com/ZakharDay/static-site-boilerplate"
-  },
-  "bugs": {
-    "url": "https://github.com/ZakharDay/static-site-boilerplate/issues"
-  },
-  "homepage": "https://github.com/ZakharDay/static-site-boilerplate#readme",
+  "author": "Varvara&Ekaterina",
+  "license": "False",
+
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "watch": "webpack --config webpack.dev.js",
