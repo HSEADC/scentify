@@ -69,11 +69,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
+  plugins:  [
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
+    
 
     // Landing page
     new HtmlWebpackPlugin({
@@ -93,17 +94,12 @@ module.exports = {
       chunks: ['page']
     }),
 
-    // Partials
-    new HtmlWebpackPartialsPlugin([
-      {
-        path: path.join(__dirname, './src/partials/analytics.html'),
-        location: 'analytics',
-        template_filename: '*',
-        priority: 'replace'
-      }
-    ])
+    // HeaderMenu chunk
+    new HtmlWebpackPlugin({
+      template: './src/Chunks/HeaderMenu.html',
+      filename: './HeaderMenu.html',
+      chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
+    }),
+
   ],
-  optimization: {
-    minimizer: [new CssMinimizerPlugin()]
-  }
 }
