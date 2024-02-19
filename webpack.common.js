@@ -9,10 +9,10 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    theory: './src/theory.js',
-    jsbasic: './src/jsbasic.js',
-    adcgame: './src/adcgame.js'
+    index: './src/index.js'
+    // theory: './src/theory.js',
+    // jsbasic: './src/jsbasic.js',
+    // adcgame: './src/adcgame.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -86,18 +86,19 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/share/'),
-          to: path.resolve(__dirname, 'dev_build/share/')
-        },
-        {
-          from: path.resolve(__dirname, 'src/share/'),
-          to: path.resolve(__dirname, 'docs/share/')
-        }
-      ]
-    }),
+    // спросить что это такое!!!1!
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'dev_build/share/')
+    //     },
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'docs/share/')
+    //     }
+    //   ]
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'

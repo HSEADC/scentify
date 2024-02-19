@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Varvara&Ekaterina",
   "license": "False",
-
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "watch": "webpack --config webpack.dev.js",
@@ -15,6 +14,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
     "file-loader": "^6.2.0",
@@ -28,7 +28,7 @@
     "sass": "^1.32.12",
     "sass-loader": "^11.0.1",
     "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.11.0",
     "webpack-merge": "^5.7.3"
   },
