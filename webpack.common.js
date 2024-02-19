@@ -69,11 +69,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
+  plugins:  [
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
+    
 
     // Landing page
     new HtmlWebpackPlugin({
@@ -93,9 +94,12 @@ module.exports = {
       chunks: ['page']
     }),
 
- // HeaderMenu chunk
- new HtmlWebpackPlugin({
-  template: './src/Chunks/HeaderMenu.html',
-  filename: './HeaderMenu.html',
-  chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
-}),
+    // HeaderMenu chunk
+    new HtmlWebpackPlugin({
+      template: './src/Chunks/HeaderMenu.html',
+      filename: './HeaderMenu.html',
+      chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
+    }),
+
+  ],
+}
