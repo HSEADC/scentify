@@ -93,17 +93,9 @@ module.exports = {
       chunks: ['page']
     }),
 
-    // Partials
-    new HtmlWebpackPartialsPlugin([
-      {
-        path: path.join(__dirname, './src/partials/analytics.html'),
-        location: 'analytics',
-        template_filename: '*',
-        priority: 'replace'
-      }
-    ])
-  ],
-  optimization: {
-    minimizer: [new CssMinimizerPlugin()]
-  }
-}
+ // HeaderMenu chunk
+ new HtmlWebpackPlugin({
+  template: './src/Chunks/HeaderMenu.html',
+  filename: './HeaderMenu.html',
+  chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
+}),
