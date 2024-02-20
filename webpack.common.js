@@ -95,9 +95,9 @@ module.exports = {
 
     // HeaderMenu chunk
     new HtmlWebpackPlugin({
-      template: './src/Chunks/HeaderMenu.html',
+      template: './src/partials/HeaderMenu.html',
       filename: './HeaderMenu.html',
-      chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
+      chunks: ['HeaderMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
     })
   ]
 }

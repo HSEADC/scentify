@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Varvara&Ekaterina",
   "license": "False",
-
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "watch": "webpack --config webpack.dev.js",
