@@ -160,24 +160,25 @@ module.exports = {
         template_filename: '*',
         priority: 'replace'
       }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/header.html'),
+        location: 'header',
+        template_filename: '*',
+        priority: 'replace'
+      }
     ])
-    // new HtmlWebpackPartialsPlugin([
-    //   {
-    //     path: path.join(__dirname, './src/partials/menu.html'),
-    //     location: 'menu',
-    //     template_filename: '*',
-    //     priority: 'replace'
-    //   }
-    // ]),
-    // new HtmlWebpackPartialsPlugin([
-    //   {
-    //     path: path.join(__dirname, './src/partials/footer.html'),
-    //     location: 'footer',
-    //     template_filename: '*',
-    //     priority: 'replace'
-    //   }
-    // ])
   ],
+  //   new HtmlWebpackPartialsPlugin([
+  //     {
+  //       path: path.join(__dirname, './src/partials/footer.html'),
+  //       location: 'footer',
+  //       template_filename: '*',
+  //       priority: 'replace'
+  //     }
+  //   ])
+  // ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]
   }

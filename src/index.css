@@ -3,4 +3,8 @@
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
-@import 'stylesheets/headermenu.scss';
+@import 'stylesheets/header.scss';
+@import 'stylesheets/aroma_atlas.scss';
+@import 'stylesheets/pop_culture.scss';
+@import 'stylesheets/articles.scss';
+@import 'stylesheets/tests.scss';
