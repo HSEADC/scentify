@@ -1,12 +1,7 @@
-# Static Site Boilerplate
+# Scentify — медиа об ароматах
 
-## How to start
-
-Clone the repository, install packages, start
+## Учебный проект 2 курса в Школе дизайна НИУ ВШЭ
 
 ```
-git clone https://github.com/ZakharDay/static-site-boilerplate.git
-cd static-site-boilerplate
-yarn
-yarn start
+Медиа о парфюмерии, ароматах в поп-культуре и повседневности
 ```
