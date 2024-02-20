@@ -1,0 +1,36 @@
+.O_Header {
+  border-bottom-width: z 1.5px;
+  border-bottom-color: var(--wise_owl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 79.69vw;
+  height: 4.69vw; //90px
+
+  .M_MenuItemsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.56vw;
+
+    p {
+      color: var(--almost-black);
+      /* p_Maintext */
+      font-family: HelveticaNeueCyr;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--dusty_brick);
+      }
+    }
+  }
+  .Q_Search {
+    &:hover {
+      color: var(--almost-black);
+    }
+  }
+}
