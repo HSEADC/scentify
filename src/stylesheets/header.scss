@@ -1,11 +1,13 @@
 .O_Header {
   display: flex;
   justify-content: space-between;
+  width: 79.69vw;
 
   .M_MenuItemsHeader {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.56vw;
 
     p {
       color: var(--almost-black);
@@ -17,8 +19,14 @@
       line-height: 140%;
 
       &:hover {
+        cursor: pointer;
         color: var(--dusty_brick);
       }
+    }
+  }
+  .Q_Search {
+    &:hover {
+      color: var(--almost-black);
     }
   }
 }
