@@ -1,7 +1,9 @@
 .O_Header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 79.69vw;
+  height: 4.69vw; //90px
 
   .M_MenuItemsHeader {
     display: flex;
