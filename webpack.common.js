@@ -1,20 +1,22 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.jsx'
+    index: './src/index.js'
+    // theory: './src/theory.js',
+    // jsbasic: './src/jsbasic.js',
+    // adcgame: './src/adcgame.js'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'docs')
-    // clean: true
   },
   module: {
     rules: [
@@ -30,10 +32,25 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/i,
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        }
+      },
+      {
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -41,8 +58,7 @@ module.exports = {
                 plugins: [['postcss-preset-env']]
               }
             }
-          },
-          'sass-loader'
+          }
         ]
       },
       {
@@ -54,10 +70,10 @@ module.exports = {
         type: 'asset/source'
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        test: /\.(png|svg|jpeg|jpg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[hash][ext][query]'
+          filename: 'images/[name].[hash][ext][query]'
         }
       },
       {
@@ -69,37 +85,101 @@ module.exports = {
       }
     ]
   },
-  plugins:  [
+  plugins: [
+    // спросить что это такое!!!1!
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'dev_build/share/')
+    //     },
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'docs/share/')
+    //     }
+    //   ]
+    // }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
     }),
-    
 
-    // Landing page
+    // Index chunk
     new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
     }),
+    //  Guideline
+    // new HtmlWebpackPlugin({
+    //   template: './src/guideline.html',
+    //   filename: './guideline.html',
+    //   chunks: ['index']
+    // }),
+    //Theory chunk
 
-    // Internal pages
+    // Section о нас
+    // new HtmlWebpackPlugin({
+    //   template: './src/about.html',
+    //   filename: './about.html',
+    //   chunks: ['index']
+    // }),
+
+    // раздел атлас ароматов
     new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/aroma_atlas.html',
+      filename: './aroma_atlas.html',
+      chunks: ['index']
+    }),
+    // раздел статей
+    new HtmlWebpackPlugin({
+      template: './src/articles.html',
+      filename: './articles.html',
+      chunks: ['index']
+    }),
+    // раздел поп-культура
+    new HtmlWebpackPlugin({
+      template: './src/pop_culture.html',
+      filename: './pop_culture.html',
+      chunks: ['index']
+    }),
+    // раздел тесты
+    new HtmlWebpackPlugin({
+      template: './src/tests.html',
+      filename: './tests.html',
+      chunks: ['index']
     }),
 
-    // HeaderMenu chunk
-    new HtmlWebpackPlugin({
-      template: './src/Chunks/HeaderMenu.html',
-      filename: './HeaderMenu.html',
-      chunks: ['HeadreMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
-    }),
+    // Article
 
+    // Partials
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/analytics.html'),
+        location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/header.html'),
+        location: 'header',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ])
   ],
+  //   new HtmlWebpackPartialsPlugin([
+  //     {
+  //       path: path.join(__dirname, './src/partials/footer.html'),
+  //       location: 'footer',
+  //       template_filename: '*',
+  //       priority: 'replace'
+  //     }
+  //   ])
+  // ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()]
+  }
 }
