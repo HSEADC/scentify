@@ -22,6 +22,20 @@ body.index {
     font-weight: 400;
     line-height: 120%; /* 57.6px */
   }
+  p {
+    color: var(--almost-black);
+    /* p_Maintext */
+    font-family: HelveticaNeueCyr;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--dusty_brick);
+    }
+  }
   h4 {
     color: var(--almost-black, #302b29);
     /* H4_Filtration */
@@ -36,11 +50,6 @@ body.index {
       color: var(--dusty_brick);
     }
   }
-  // .test_div {
-  //   height: 200px;
-  //   width: 300px;
-  //   background-color: aqua;
-  // }
   .M_Filters {
     display: flex;
     align-items: center;
@@ -50,10 +59,9 @@ body.index {
       padding: 8px 24px;
       justify-content: center;
       align-items: center;
-      gap: 10px;
 
       border-radius: 8px;
-      border: 1.5px solid var(--wise-owl, #ccbba3);
+      border: 1.5px solid var(--wise-owl);
     }
   }
   .C_CardNotes {
