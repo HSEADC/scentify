@@ -110,6 +110,14 @@ module.exports = {
       filename: './index.html',
       chunks: ['index']
     }),
+
+
+        // Header chunk
+        new HtmlWebpackPlugin({
+          template: './src/partials/header.html',
+          filename: './header.html',
+          chunks: ['header']
+        }),
     //  Guideline
     // new HtmlWebpackPlugin({
     //   template: './src/guideline.html',
