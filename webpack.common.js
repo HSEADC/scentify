@@ -70,6 +70,21 @@ module.exports = {
     ]
   },
   plugins: [
+    // спросить что это такое!!!1!
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'dev_build/share/')
+    //     },
+    //     {
+    //       from: path.resolve(__dirname, 'src/share/'),
+    //       to: path.resolve(__dirname, 'docs/share/')
+    //     }
+    //   ]
+    // }),
+
+
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -84,7 +99,23 @@ module.exports = {
       chunks: ['index']
     }),
 
-    // Internal pages
+
+    //  Guideline
+    // new HtmlWebpackPlugin({
+    //   template: './src/guideline.html',
+    //   filename: './guideline.html',
+    //   chunks: ['index']
+    // }),
+    //Theory chunk
+
+    // Section о нас
+    // new HtmlWebpackPlugin({
+    //   template: './src/about.html',
+    //   filename: './about.html',
+    //   chunks: ['index']
+    // }),
+
+    // раздел атлас ароматов
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
@@ -95,9 +126,54 @@ module.exports = {
 
     // HeaderMenu chunk
     new HtmlWebpackPlugin({
-      template: './src/partials/HeaderMenu.html',
-      filename: './HeaderMenu.html',
-      chunks: ['HeaderMenu'] // Дублируем имя Chunks в массив, чтоб он подгружал
-    })
-  ]
+      template: './src/articles.html',
+      filename: './articles.html',
+      chunks: ['index']
+    }),
+    // раздел поп-культура
+    new HtmlWebpackPlugin({
+      template: './src/pop_culture.html',
+      filename: './pop_culture.html',
+      chunks: ['index']
+    }),
+    // раздел тесты
+    new HtmlWebpackPlugin({
+      template: './src/tests.html',
+      filename: './tests.html',
+      chunks: ['index']
+    }),
+
+    // Article
+
+    // Partials
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/analytics.html'),
+        location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/header.html'),
+        location: 'header',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ])
+  ],
+
+  //   new HtmlWebpackPartialsPlugin([
+  //     {
+  //       path: path.join(__dirname, './src/partials/footer.html'),
+  //       location: 'footer',
+  //       template_filename: '*',
+  //       priority: 'replace'
+  //     }
+  //   ])
+  // ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()]
+  }
 }
