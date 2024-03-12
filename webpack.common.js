@@ -99,6 +99,8 @@ module.exports = {
     //     }
     //   ]
     // }),
+
+
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
@@ -112,12 +114,6 @@ module.exports = {
     }),
 
 
-        // Header chunk
-        new HtmlWebpackPlugin({
-          template: './src/partials/header.html',
-          filename: './header.html',
-          chunks: ['header']
-        }),
     //  Guideline
     // new HtmlWebpackPlugin({
     //   template: './src/guideline.html',
@@ -178,6 +174,7 @@ module.exports = {
       }
     ])
   ],
+
   //   new HtmlWebpackPartialsPlugin([
   //     {
   //       path: path.join(__dirname, './src/partials/footer.html'),
