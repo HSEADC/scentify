@@ -5,6 +5,11 @@ body.index {
   align-items: center;
   background: var(--book_paper);
 
+  .Q_LineHeader {
+    border: none;
+	  border-top: 2px solid var(--wise-owl);
+  }
+
   .SO_Wrap {
     display: flex;
     flex-direction: column;
