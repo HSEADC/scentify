@@ -5,19 +5,26 @@ body.index {
   align-items: center;
   background: var(--book_paper);
 
-  .SO_Wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 79.69vw;
-    margin-top: 3.33vw;
+  // .Q_LineHeader {
+  //   width: 100%;
+  //   border: 1px solid #CCBBA3;
+  // }
+
+  h2 {
+    color: var(--almost_black, #302B29);
+    /* h2 */
+    font-family: "TT Livret Subhead";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 64px */
   }
   h3 {
     color: var(--almost-black, #302b29);
     text-align: center;
     /* h3_CardHeader */
     font-family: 'TT Livret Subhead';
-    font-size: 48px;
+    font-size: 2.6rem;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 57.6px */
@@ -26,16 +33,35 @@ body.index {
     color: var(--almost-black);
     /* p_Maintext */
     font-family: HelveticaNeueCyr;
-    font-size: 22px;
+    font-size: 1.38rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
 
+
+    // Тут не надо хавер! а то у нас вообще весь текст красится на странице
+    // &:hover {
+    //   cursor: pointer;
+    //   color: var(--dusty_brick);
+    // }
+  }
+  a {
+    text-decoration: none;
+    color: var(--almost-black, #E78B5D);
+    font: Helvetica;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-decoration: none;
+
     &:hover {
       cursor: pointer;
-      color: var(--dusty_brick);
+      color: var(--dusty_brick, #E78B5D);
     }
   }
+
+
   h4 {
     color: var(--almost-black, #302b29);
     /* H4_Filtration */
@@ -50,123 +76,304 @@ body.index {
       color: var(--dusty_brick);
     }
   }
-  .M_Filters {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    .A_Filter {
-      display: flex;
-      padding: 8px 24px;
-      justify-content: center;
-      align-items: center;
 
+  
+  
+
+
+// Количество картиночек внутри слайдера-карусели
+    $nb-slides: 5;
+
+    .line {
+      width: 100%;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .center {
+      @extend .flex;
+      align-items: center; // horizontal
+      justify-content: center; // vertical
+    }
+
+
+    .carousel-wrapper {
+      @extend .flex;
+      position: relative;
+      max-width: 80.21vw;
+      margin: 30px;
+
+      input {
+        display: none;
+      }
+    }
+
+
+    // Сам слайдер с картинками
+    .carousel {
+      @extend .line;
+      overflow: hidden;
       border-radius: 8px;
-      border: 1.5px solid var(--wise-owl);
+
+      ul {
+        @extend .center;
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0 auto;
+        height: 40vh;
+        width: 100% * $nb-slides;
+
+        transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+
+      li {
+        @extend .line;
+
+        img {
+          @extend .line;
+          border-radius: 8px;
+        }
+      }
     }
-  }
-  .C_CardNotes {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
-  .O_CardScent {
-    grid-area: 1 / 1 / 2 / 4;
 
-    display: flex;
-    width: 360px;
-    height: 530px;
-    padding: 30px 0px 24px 0px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 7px;
-    flex-shrink: 0;
 
-    border-radius: 8px;
-    background: var(--paper-card, #fffbf4);
+// Точки снизу
+    .nav-dot {
+      $dot-size: 0.63vw;
+      position: absolute;
+      cursor: pointer;
 
-    .A_Tag {
+      margin-left: -$dot-size / 2;
+      bottom: -$dot-size * 2.2;
+      width: $dot-size;
+      height: $dot-size;
+
+      opacity: 0.5;
+      background-color: #CCBBA3;
+      border-radius: 50%;
+      transition: .4s;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.2);
+        background-color: #E78B5D;
+      }
+
+      &:active {
+        background-color: #E78B5D;
+        transform: scale(0.9);
+      }
+    }
+
+// goes from 1 to 5.
+    @for $n from 1 through $nb-slides {
+      // arranges the navigation dots horizontally
+      .nav-dot[for=slide#{$n}] {
+        left: 50% + ((($n - 1) - (($nb-slides - 1)/ 2)) * 5%);
+      }
+
+      #slide#{$n}:checked {
+        // moves the carousel to the right slide
+        & ~ .carousel ul { left: -100% * ($n - 1) }
+
+        // highlights the selected navigation dot
+          & ~ .nav-dot[for=slide#{$n}] {
+          opacity: 1;
+        }
+      }
+    }
+
+
+    // Стрелки чтобы листать
+
+    %arrow {
+      $arrow-size: 5.56vh;
+      display: none;  // hidden by default
+      position: absolute;
+
+      cursor: pointer;
+      font-weight: 400;
+
+
+      top: 50%;
+      z-index: 1;
+      opacity: .7;
+      margin-top: -$arrow-size / 2;
+      height: $arrow-size;
+      font-size: $arrow-size;
+      transition: .2s;
+
+      
+  
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    .left-arrow {
+      @extend %arrow;
+      left: 1vw;
+      color: #CCBBA3;
+    
+    }
+
+    .right-arrow {
+      @extend %arrow;
+      right: 1vw;
+      color: #CCBBA3;
+    }
+
+    @function custom-modulo($n) {
+      // this function returns '$n % $nb-slides', except that if the result is 0,
+      // '$nb-slides' is returned.
+      // for exemple, for $nb-slides = 4, possible values are {1, 2, 3, 4}
+      // (and not {0, 1, 2, 3}).
+      @return 1 + ($nb-slides + (($n - 1) % $nb-slides)) % $nb-slides;
+    }
+
+    @for $n from 1 through $nb-slides {
+      // when the nth slide is selected,
+      // displays the left-arrow that goes to the (n-1)th slide
+      // and the right arrow that goes to the (n+1)th slide.
+      // don't worry, it loops thanks to the 'custom-modulo' function !
+
+      #slide#{$n}:checked {
+      & ~ .left-arrow[for=slide#{custom-modulo($n - 1)}],
+        & ~ .right-arrow[for=slide#{custom-modulo($n + 1)}] {
+          display: block;
+        }
+      }
+    }
+
+
+    // Баннер с описанием а что вообще это такое
+    .O_BannerAbout {
+      width: 100%;
       display: flex;
-      height: 44px;
-      padding: 0px 16px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-
-      border-radius: 6px;
-      border: 1.5px solid var(--warm-ceramics, #e78b5d);
-      background: var(--paper-card, #fffbf4);
+  
+      .A_BannerImageContent {
+        margin: auto 0;
+        width: 18.75vw;
+        height: 29.63vh;
+        overflow: hidden;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+  
+      .A_BannerTextContent {
+        margin: auto;
+        font-size: 2.75rem;
+        text-align: center;
+        
+  
+        .Q_BannerText { 
+          line-height: 115%;
+          font-size: 2.75rem;
+          font-weight: 400;
+          font-family: 'TT Livret Subhead';
+          
+          &.Line1 {
+            font-style: normal;
+          }
+          &.Line2 {
+            font-style: italic;
+          }
+        }
+      }
     }
-  }
-  .div2 {
-    grid-area: 1 / 4 / 2 / 7;
-  }
-  .div3 {
-    grid-area: 1 / 7 / 2 / 10;
-  }
-  .div4 {
-    grid-area: 1 / 10 / 2 / 13;
-  }
-  .div5 {
-    grid-area: 2 / 1 / 3 / 4;
-  }
-  .div6 {
-    grid-area: 2 / 4 / 3 / 7;
-  }
-  .div7 {
-    grid-area: 2 / 7 / 3 / 10;
-  }
-  .div8 {
-    grid-area: 2 / 10 / 3 / 13;
-  }
-  .div9 {
-    grid-area: 3 / 1 / 4 / 4;
-  }
-  .div10 {
-    grid-area: 3 / 4 / 4 / 7;
-  }
-  .div11 {
-    grid-area: 3 / 7 / 4 / 10;
-  }
-  .div12 {
-    grid-area: 3 / 10 / 4 / 13;
-  }
-  .div13 {
-    grid-area: 4 / 1 / 5 / 4;
-  }
-  .div14 {
-    grid-area: 4 / 4 / 5 / 7;
-  }
-  .div15 {
-    grid-area: 4 / 7 / 5 / 10;
-  }
-  .div16 {
-    grid-area: 4 / 10 / 5 / 13;
-  }
-  .div17 {
-    grid-area: 5 / 1 / 6 / 4;
-  }
-  .div18 {
-    grid-area: 5 / 4 / 6 / 7;
-  }
-  .div19 {
-    grid-area: 5 / 7 / 6 / 10;
-  }
-  .div20 {
-    grid-area: 5 / 10 / 6 / 13;
-  }
-  .div21 {
-    grid-area: 6 / 1 / 7 / 4;
-  }
-  .div22 {
-    grid-area: 6 / 4 / 7 / 7;
-  }
-  .div23 {
-    grid-area: 6 / 7 / 7 / 10;
-  }
-  .div24 {
-    grid-area: 6 / 10 / 7 / 13;
-  }
+
+    // Блок про библиотеку ароматов
+
+    .SO_NotesMainPage {
+      width: 100%;
+      margin: 6vh 0;
+
+
+        .W_H2AllButton {
+          display: flex;
+          align-items: flex-end;
+          gap: 7.71vw;
+
+            .M_H2All {
+              margin-left: 20.05vw; //385px
+
+                .Q_H2AllText {
+                  inherits: h2;
+                  &.Line2 {
+                    font-style: italic;
+                    margin-left: 6.77vw; //130px
+                  }
+                }
+
+            }
+        }
+    }
+
+
+
+    // Стили для карточек с ароматами
+
+    .C_CardOnMain {
+      width: 100%;
+      justify-content: space-between;
+      gap: 1.56vw;
+      display: flex;
+      margin-top: 5vh;
+      
+
+        .O_CardScent {
+          width: 18.75vw;
+          height: 100%;
+          padding-bottom: 3vh;
+          border-radius: 4px;
+          background-color: var(--paper_card, #FFFBF4);
+          justify-content: center;
+          overflow: hidden;
+
+
+            .A_ImageLibrary {
+              height: 100%;
+              width: 100%;
+              display: flex;
+            }
+
+            .M_Tags {
+              display: inline-flex;
+              justify-content: center;
+              width: 100%;
+              margin-top: 0.74vh;
+
+                .A_Tag {
+                  font-size: 1.38rem;
+                  line-height: 3.7vh;
+                  color: var(--warm_ceramics, #E78B5D);
+                  border-radius: 4px;
+                  border: 1.5px solid var(--warm_ceramics, #E78B5D);
+                  padding: 0 0.83vw;
+                  background: var(--paper_card, #FFFBF4);
+
+                  &:hover {
+                    transition: 0.3s;
+                    color: #fbe8c7;
+                    background-color: #f19b70;
+                  }
+                }
+            }
+        }
+    }
+
+
+
 }
