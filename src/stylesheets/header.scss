@@ -6,7 +6,7 @@
   width: 79.69vw;
   height: 4.69vw; //90px
   // Не работает, лучше через тег
-  border-bottom: 1,5px solid black;
+  border-bottom: 1px solid #CCBBA3;
 
   .M_MenuItemsHeader {
     display: flex;
@@ -43,10 +43,5 @@
     margin: 0 17vw 0 0;
   }
 
-  .Q_LineHeader {
-    height: 1,5px;
-    wigth: 100%;
-    background-color: var(--wise_owl);
-  }
 
 }
