@@ -10,19 +10,21 @@ body.index {
   //   border: 1px solid #CCBBA3;
   // }
 
-  .SO_Wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 79.69vw;
-    margin-top: 3.33vw;
+  h2 {
+    color: var(--almost_black, #302B29);
+    /* h2 */
+    font-family: "TT Livret Subhead";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 64px */
   }
   h3 {
     color: var(--almost-black, #302b29);
     text-align: center;
     /* h3_CardHeader */
     font-family: 'TT Livret Subhead';
-    font-size: 48px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 57.6px */
@@ -31,16 +33,35 @@ body.index {
     color: var(--almost-black);
     /* p_Maintext */
     font-family: HelveticaNeueCyr;
-    font-size: 22px;
+    font-size: 1.38rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
 
+
+    // Тут не надо хавер! а то у нас вообще весь текст красится на странице
+    // &:hover {
+    //   cursor: pointer;
+    //   color: var(--dusty_brick);
+    // }
+  }
+  a {
+    text-decoration: none;
+    color: var(--almost-black, #E78B5D);
+    font: Helvetica;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-decoration: none;
+
     &:hover {
       cursor: pointer;
-      color: var(--dusty_brick);
+      color: var(--dusty_brick, #E78B5D);
     }
   }
+
+
   h4 {
     color: var(--almost-black, #302b29);
     /* H4_Filtration */
@@ -55,6 +76,8 @@ body.index {
       color: var(--dusty_brick);
     }
   }
+
+  
   
 
 
@@ -79,7 +102,7 @@ body.index {
     .carousel-wrapper {
       @extend .flex;
       position: relative;
-      max-width: 1540px;
+      max-width: 80.21vw;
       margin: 30px;
 
       input {
@@ -102,7 +125,7 @@ body.index {
 
         margin: 0;
         padding: 0 auto;
-        height: 400px;
+        height: 37.04vh;
         width: 100% * $nb-slides;
 
         transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
@@ -121,7 +144,7 @@ body.index {
 
 // Точки снизу
     .nav-dot {
-      $dot-size: 12px;
+      $dot-size: 0.63vw;
       position: absolute;
       cursor: pointer;
 
@@ -169,7 +192,7 @@ body.index {
     // Стрелки чтобы листать
 
     %arrow {
-      $arrow-size: 60px;
+      $arrow-size: 5.56vh;
       display: none;  // hidden by default
       position: absolute;
 
@@ -200,14 +223,14 @@ body.index {
 
     .left-arrow {
       @extend %arrow;
-      left: 15px;
+      left: 1vw;
       color: #CCBBA3;
     
     }
 
     .right-arrow {
       @extend %arrow;
-      right: 15px;
+      right: 1vw;
       color: #CCBBA3;
     }
 
@@ -231,6 +254,71 @@ body.index {
           display: block;
         }
       }
+    }
+
+
+    // Баннер с описанием а что вообще это такое
+    .O_BannerAbout {
+      width: 100%;
+      display: flex;
+  
+      .A_BannerImageContent {
+        margin: auto 0;
+        width: 18.75vw;
+        height: 29.63vh;
+        overflow: hidden;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+  
+      .A_BannerTextContent {
+        margin: auto;
+        font-size: 2.75rem;
+        text-align: center;
+        
+  
+        .Q_BannerText { 
+          line-height: 115%;
+          font-size: 2.75rem;
+          font-weight: 400;
+          font-family: 'TT Livret Subhead';
+          
+          &.Line1 {
+            font-style: normal;
+          }
+          &.Line2 {
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    // Блок про библиотеку ароматов
+
+    .SO_NotesMainPage {
+      width: 100%;
+      margin: 11.11vh 0;
+
+
+        .W_H2AllButton {
+          display: flex;
+          align-items: flex-end;
+          gap: 7.71vw;
+
+            .M_H2All {
+              margin-left: 20.05vw; //385px
+
+                .Q_H2AllText {
+                  inherits: h2;
+                  &.Line2 {
+                    font-style: italic;
+                    margin-left: 6.77vw; //130px
+                  }
+                }
+
+            }
+        }
     }
 
 
