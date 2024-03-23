@@ -7,60 +7,169 @@
   </head>
 
   <body class="index">
+    <!-- Хедер с навигацией, А зачем там кнопка поиска??? -->
     <header></header>
-    <div class="SO_Wrap">
-      <div class="M_Filters">
-        <div class="A_Filter"><h4>пряные</h4></div>
-        <div class="A_Filter"><h4>цветочные</h4></div>
-        <div class="A_Filter"><h4>древесные</h4></div>
-        <div class="A_Filter"><h4>зелёные</h4></div>
-        <div class="A_Filter"><h4>фруктовые</h4></div>
-        <div class="A_Filter"><h4>анималистические</h4></div>
-        <div class="A_Filter"><h4>гурманские</h4></div>
+
+    <!-- Карусель с карточками и контентом (НУЖНО ВНУТРЬ ПОЛОЖИТЬ КОНТЕНТ!) -->
+    <div class="center">
+      <div class="carousel-wrapper">
+        <!-- abstract radio buttons for slides -->
+        <input id="slide1" type="radio" name="controls" checked="checked" />
+        <input id="slide2" type="radio" name="controls" />
+        <input id="slide3" type="radio" name="controls" />
+        <input id="slide4" type="radio" name="controls" />
+        <input id="slide5" type="radio" name="controls" />
+
+        <!-- navigation dots -->
+        <label for="slide1" class="nav-dot"></label>
+        <label for="slide2" class="nav-dot"></label>
+        <label for="slide3" class="nav-dot"></label>
+        <label for="slide4" class="nav-dot"></label>
+        <label for="slide5" class="nav-dot"></label>
+
+        <!-- arrows -->
+        <label for="slide1" class="left-arrow"> ☜ </label>
+        <label for="slide2" class="left-arrow"> ☜ </label>
+        <label for="slide3" class="left-arrow"> ☜ </label>
+        <label for="slide4" class="left-arrow"> ☜ </label>
+        <label for="slide5" class="left-arrow"> ☜ </label>
+
+        <label for="slide1" class="right-arrow"> ☞ </label>
+        <label for="slide2" class="right-arrow"> ☞ </label>
+        <label for="slide3" class="right-arrow"> ☞ </label>
+        <label for="slide4" class="right-arrow"> ☞ </label>
+        <label for="slide5" class="right-arrow"> ☞ </label>
+
+        <div class="carousel">
+          <!-- Нужно вставить контент внутрь карусели! -->
+          <ul>
+            <li>
+              <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" />
+            </li>
+            <li>
+              <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+            </li>
+            <li>
+              <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="С_CardsNotes">
+    </div>
+
+    <!-- Баннер с описанием о чем медийка -->
+    <div class="O_BannerAbout">
+      <div class="A_BannerImageContent Left"> 
+        <img src="./images/A_BannerImage_left.png" alt="">
+      </div>
+      <div class="A_BannerTextContent"> 
+        <p> 
+          <span class="Q_BannerText Line1">Медиа о прафюмерии и ароматах</span> <br>
+          <span class="Q_BannerText Line2">в поп-культуре и повседневности</span>
+        </p>
+      </div>
+      <div class="A_BannerImageContent Right"> 
+        <img src="./images/A_BannerImage_right.png" alt="">
+      </div>
+
+    </div>
+
+    <!-- Про библиотеку Ароматов -->
+    <div class="SO_NotesMainPage">
+      <div class="W_H2AllButton">
+        <div class="M_H2All">
+          <p class="A_H2All">
+            <h2 class="Q_H2AllText Line1">Коллекция</h2>
+            <h2 class="Q_H2AllText Line2">из множества ароматов</h2>
+          </p>
+        </div>
+        <div class="A_ButtonSecondary">
+          <a class="Q_ButtonSecondary" href="./src/aroma_atlas.html"> Смотреть все ☛</a>
+        </div>
+      </div>
+      <div class="C_CardOnMain">
+
+        <!-- Тут фишка в разной высоте (так получается из-за разной исходной высоты картинок, но мне так даже нравится) -->
         <div class="O_CardScent">
-          <div class="A_ImageLibrary">
-            <img src="images/A_ImageLibrary_cinnamon.png" alt="" />
-            <h3>Корица</h3>
-            <div class="M_Tags">
-              <div class="A_Tag"><p>пряные</p></div>
-            </div>
+          <div>
+            <img class="A_ImageLibrary" src="./images/A_ImageLibrary_neroli.png" alt="">
+          </div>
+          <div>
+            <h3>Нероли</h3>
+          </div>
+          <div class="M_Tags">
+            <p class="A_Tag">цветочные</p>
           </div>
         </div>
-
         <div class="O_CardScent">
-          <div class="A_ImageLibrary">
-            <img src="images/A_ImageLibrary_cinnamon.png" alt="" />
-            <h3>Корица</h3>
-            <div class="M_Tags">
-              <div class="A_Tag"><p>пряные</p></div>
-            </div>
+          <div>
+            <img class="A_ImageLibrary" src="./images/A_ImageLibrary_cherry.png" alt="">
+          </div>
+          <div>
+            <h3>Вишня</h3>
+          </div>
+          <div class="M_Tags">
+            <p class="A_Tag">фруктовые</p>
           </div>
         </div>
-
         <div class="O_CardScent">
-          <div class="A_ImageLibrary">
-            <img src="images/A_ImageLibrary_cinnamon.png" alt="" />
-            <h3>Корица</h3>
-            <div class="M_Tags">
-              <div class="A_Tag"><p>пряные</p></div>
-            </div>
+          <div>
+            <img class="A_ImageLibrary" src="./images/A_ImageLibrary_palosanto.png" alt="">
+          </div>
+          <div>
+            <h3>Пало санто</h3>
+          </div>
+          <div class="M_Tags">
+            <p class="A_Tag">древесные</p>
           </div>
         </div>
-
         <div class="O_CardScent">
-          <div class="A_ImageLibrary">
-            <img src="images/A_ImageLibrary_cinnamon.png" alt="" />
-            <h3>Корица</h3>
-            <div class="M_Tags">
-              <div class="A_Tag"><p>пряные</p></div>
-            </div>
+          <div>
+            <img class="A_ImageLibrary" src="./images/A_ImageLibrary_patchouli.png" alt="">
+          </div>
+          <div>
+            <h3>Пачули</h3>
+          </div>
+          <div class="M_Tags">
+            <p class="A_Tag">древесные</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="test_div"></div>
+    <!-- Про статьи со всякими штуками -->
+    <div class="SO_NotesMainPage">
+      <div class="W_H2AllButton">
+        <div class="M_H2All">
+          <p class="A_H2All">
+            <h2 class="Q_H2AllText Line1">Вся информация</h2>
+            <h2 class="Q_H2AllText Line2">о парфюмерии</h2>
+          </p>
+        </div>
+        <div class="A_ButtonSecondary">
+          <a class="Q_ButtonSecondary" href="./src/aroma_atlas.html"> Смотреть все ☛</a>
+        </div>
+      </div>
+      <div class="C_MainPageArticles">
+        <div class="W_ArticlesCards">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    
+
+     
+
+
+
+
   </body>
 </html>
