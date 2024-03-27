@@ -1,19 +1,20 @@
 @font-face {
   font-family: 'TT Livret Subhead';
-  src: url('fonts/TTLivretSubheadRegular.ttf') format('ttf');
+  src: url('/src/fonts/TTLivretSubheadRegular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TT Livret Subhead Italic';
-  src: url('fonts/TTLivretSubheadItalic.ttf') format('ttf');
+  src: url('/src/fonts/TTLivretSubheadItalic.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('fonts/helveticaneuecyr_roman.ttf') format('ttf');
+  src: url('/src/fonts/helveticaneuecyr_roman.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
+
