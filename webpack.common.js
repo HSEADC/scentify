@@ -84,7 +84,6 @@ module.exports = {
     //   ]
     // }),
 
-
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -98,7 +97,6 @@ module.exports = {
       filename: './index.html',
       chunks: ['index']
     }),
-
 
     //  Guideline
     // new HtmlWebpackPlugin({
@@ -121,7 +119,8 @@ module.exports = {
       filename: './aroma_atlas.html',
       chunks: ['index']
     }),
-    // HeaderMenu chunk
+
+    // раздел статей
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',

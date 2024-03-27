@@ -1,0 +1,10 @@
+.M_Filters {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0 auto;
+
+  @media (max-width: 390px) {
+    gap: 8px;
+  }
+}
