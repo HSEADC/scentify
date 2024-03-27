@@ -57,8 +57,6 @@
     }
 }
 
-
-
 .C_MainPageArticles {
   display: flex;
   margin-top: 5vh;
@@ -271,6 +269,29 @@
   }
 }
 
+
+
+.C_CardsArticle {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(7, 1fr);
+grid-column-gap: 30px;
+grid-row-gap: 30px;
+
+.O_CardArticle {
+  margin-bottom: 0;
+
+  h3 {
+    color: var(--almost_black, #302B29);
+    
+    /* h3_CardHeader */
+    font-family: "TT Livret Subhead";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 50.6px */  }
+}
+}
 
 
 
