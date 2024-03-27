@@ -32,7 +32,7 @@ body.index {
   p {
     color: var(--almost-black);
     /* p_Maintext */
-    font-family: HelveticaNeueCyr;
+    font-family: "helveticaneuecyr_roman";
     font-size: 1.38rem;
     font-style: normal;
     font-weight: 400;
@@ -48,7 +48,7 @@ body.index {
   a {
     text-decoration: none;
     color: var(--almost-black, #E78B5D);
-    font: Helvetica;
+    font-family: "HelveticaNeueCyr";
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
@@ -324,6 +324,14 @@ body.index {
 
             }
         }
+
+        .PopCult {
+          gap: 13.8vw;        
+        }
+
+        .Library {
+          gap: 6vw;        
+        }
     }
 
 
@@ -362,6 +370,7 @@ body.index {
 
                 .A_Tag {
                   font-size: 1.38rem;
+                  font-family: "HelveticaNeueCyr";
                   line-height: 3.7vh;
                   color: var(--warm_ceramics, #E78B5D);
                   border-radius: 4px;
@@ -399,6 +408,7 @@ body.index {
         .W_ArticlesCards_left , .W_ArticlesCards_right {
           display: flex;
           flex-direction: column;
+          height: 100%;
 
           .O_CardArticle {
             display: flex;
@@ -427,6 +437,7 @@ body.index {
 
               .A_Tag {
                 font-size: 1.38rem;
+                font-family: "HelveticaNeueCyr";
                 color: #E78B5D;
                 border-radius: 4px;
                 border: 1.5px solid var(--warm_ceramics, #E78B5D);
@@ -473,10 +484,121 @@ body.index {
       display: flex;
       margin-top: 5vh;
       overflow: hidden;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: space-around;
+      align-items: flex-start;
       
       .O_CardStar {
+        display: flex;
         border-radius: 4px;
         border: 1px solid var(--wise-owl, #CCBBA3);
+
+      
+        .M_Tags {
+          display: inline-flex;
+          gap: 0.42vw;
+          margin-bottom: 1.5vh;
+          margin-top: 1.85vh;
+          margin-left: 1.04vw;
+          
+
+          .A_Tag {
+            font-size: 1.38rem;
+            font-family: "HelveticaNeueCyr";
+            color: #E78B5D;
+            border-radius: 4px;
+            border: 1.5px solid var(--warm_ceramics, #E78B5D);
+            background: var(--book-paper, #FAF1E4);
+            height: 4.07vh;
+            padding: 0px 0.83vw;
+            line-height: 4.07vh;
+
+            &:hover {
+              transition: 0.3s;
+              color: #fbe8c7;
+              background-color: #f19b70;
+            }
+          }
+        }
+
+        .A_ImageSeleb1 {
+          width: 29.64vw;
+          height: 43.61vh;
+        }
+
+        h3 {
+          margin-top: 29.72vh;
+          margin-left: 1.04vw;
+          text-align: left;
+          width: 15vw;
+        }
+
+        
+      }
+
+      .O_CardStarSecType {
+        margin-left: 1.56vw;
+        margin-top: 11.11vh;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        border: 1px solid var(--wise-owl, #CCBBA3);
+
+        .W_CardStarUpContent {
+          display: flex;
+          flex-direction: row;
+          gap: 1.3vw;
+
+          .A_ImageSeleb1 {
+            margin-bottom: 1.5vh;
+            margin-top: 1.85vh;
+            margin-right: 1.04vw;
+
+          }
+        }
+
+        .W_CardStarBottomContent {
+          width: 22vw;
+          margin-top: 6.2vh;
+          margin-left: 1.04vw;
+          
+          h3 {
+            text-align: left;
+            margin-bottom: 1.85vh;
+          }
+
+        }
+
+
+
+      
+        .M_Tags {
+          display: inline-flex;
+          gap: 0.42vw;
+          margin-bottom: 1.5vh;
+          margin-top: 1.85vh;
+          margin-left: 1.04vw;
+          
+
+          .A_Tag {
+            font-size: 1.38rem;
+            font-family: "HelveticaNeueCyr";
+            color: #E78B5D;
+            border-radius: 4px;
+            border: 1.5px solid var(--warm_ceramics, #E78B5D);
+            background: var(--book-paper, #FAF1E4);
+            height: 4.07vh;
+            padding: 0px 0.83vw;
+            line-height: 4.07vh;
+
+            &:hover {
+              transition: 0.3s;
+              color: #fbe8c7;
+              background-color: #f19b70;
+            }
+          }
+        }
 
         
       }

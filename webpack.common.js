@@ -117,13 +117,10 @@ module.exports = {
 
     // раздел атлас ароматов
     new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/aroma_atlas.html',
+      filename: './aroma_atlas.html',
+      chunks: ['index']
     }),
-
     // HeaderMenu chunk
     new HtmlWebpackPlugin({
       template: './src/articles.html',
