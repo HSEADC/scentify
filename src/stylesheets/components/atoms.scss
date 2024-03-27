@@ -80,6 +80,42 @@
   align-items: center;        
 }
 
+.A_Input {
+  width: 490px;
+  height: 60px;
+  min-width: 288px;
+  max-width: 490px;
+  padding: 14px 17px;  border-radius: 4px;
+  border: 1px solid var(--wise_owl, #CCBBA3);
+  background: var(--paper_card, #FFFBF4);
+}
+
+.A_buttonPrimary {
+  border-radius: 4px;
+  background: var(--dusty_brick, #E76423);
+  color: #FFFBF4;
+  font-family: "HelveticaNeueCyr";
+  font-size: 22px;
+  line-height: 22px;
+  display: flex;
+  height: 30px;
+  max-width: 490px;
+  padding: 14px 17px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+
+  & :hover {
+    border-radius: 4px;
+    background: var(--warm_ceramics, #E78B5D);
+  }
+}
+
+
+
+
 
 
 

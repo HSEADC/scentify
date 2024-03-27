@@ -40,3 +40,80 @@
   }
 
 
+  //Для футера на главной
+
+  .SO_FooterMain {
+    width: 79.69vw;
+    height: 42.59vh;
+    border-top: 1px solid #CCBBA3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .Q_Logo {
+      margin-top: 3.7vh;
+    }
+
+    .O_FooterTextInfo {
+      display: flex;
+      flex-direction: row;
+
+      .M_NewsFooter , .M_Authors , .M_Curators {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      // .M_NewsFooter :nth-child(2) {
+      //   margin-left: 50px;
+      // }
+
+      .M_NewsFooter {
+
+        & :nth-child(2) {
+          margin-left: 2.6vw;
+        }
+
+        & :nth-child(3) {
+          margin-left: 10.47vw;
+        }
+
+      }
+
+      .M_Authors {
+        margin-left: 17.88vw;
+        margin-right: 7.85vw;
+      }
+
+      .M_SocialIcons {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        margin-left: 5.82vw;
+
+        img {
+          height: 40px;
+          width: 40px;
+        }
+
+        div {
+          height: 40px;
+          width: 40px;
+          background-color: aquamarine;
+        }
+      }
+
+      .M_Curators , .M_Authors {
+
+        a {
+          color: #302B29;
+        }
+
+      }
+
+    }
+
+  }
+
