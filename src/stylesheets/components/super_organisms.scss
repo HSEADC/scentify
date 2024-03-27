@@ -1,0 +1,42 @@
+
+
+// для всех на гл странице
+.SO_NotesMainPage {
+    width: 100%;
+    margin: 6vh 0;
+
+
+      .W_H2AllButton {
+        display: flex;
+        align-items: flex-end;
+        gap: 7.71vw;
+
+          .M_H2All {
+            margin-left: 20.05vw; //385px
+
+              .Q_H2AllText {
+                inherits: h2;
+                &.Line2 {
+                  font-style: italic;
+                  margin-left: 6.77vw; //130px
+                }
+                
+                &.Line2_1 {
+                  font-style: italic;
+                  margin-left: 21vw; //389px
+                }
+              }
+
+          }
+      }
+
+      .PopCult {
+        gap: 13.8vw;        
+      }
+
+      .Library {
+        gap: 6vw;        
+      }
+  }
+
+
