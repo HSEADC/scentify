@@ -150,6 +150,16 @@ module.exports = {
         priority: 'replace'
       }
     ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer_for_index.html'),
+        location: 'footer_for_index',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/header.html'),
