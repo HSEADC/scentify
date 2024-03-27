@@ -246,6 +246,10 @@
     display: flex;
     margin-bottom: 1.85vh;
     margin-left: 1.04vw;
+
+    a {
+      text-decoration: none;
+    }
   }
   
 
@@ -485,8 +489,13 @@
   .M_Curators , .M_Authors {
 
     a {
-      color: #302B29;
-    }
+          /* p */
+          font-family: HelveticaNeueCyr;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; /* 30.8px */    
+     }
 
   }
 

@@ -126,6 +126,38 @@ module.exports = {
       filename: './articles.html',
       chunks: ['index']
     }),
+
+    // внутряки для статей
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesHYGGE.html',
+      filename: './articlesHYGGE.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSPRING.html',
+      filename: './articlesSPRING.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesLESSSTRESS.html',
+      filename: './articlesLESSSTRESS.html',
+      chunks: ['index']
+    }),
+
+
+
+
+
+
+
+
+
+
+
+
+
     // раздел поп-культура
     new HtmlWebpackPlugin({
       template: './src/pop_culture.html',
@@ -155,6 +187,15 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/footer_for_index.html'),
         location: 'footer_for_index',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer_for_all.html'),
+        location: 'footer_for_all',
         template_filename: '*',
         priority: 'replace'
       }
