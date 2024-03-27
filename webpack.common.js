@@ -1,22 +1,20 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
-    // theory: './src/theory.js',
-    // jsbasic: './src/jsbasic.js',
-    // adcgame: './src/adcgame.js'
+    index: './src/index.js',
+    page: './src/page.jsx'
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'docs')
+    // clean: true
   },
   module: {
     rules: [
@@ -32,25 +30,10 @@ module.exports = {
         }
       },
       {
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true
-          }
-        }
-      },
-      {
-        test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.css$/i,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -58,7 +41,8 @@ module.exports = {
                 plugins: [['postcss-preset-env']]
               }
             }
-          }
+          },
+          'sass-loader'
         ]
       },
       {
@@ -70,10 +54,10 @@ module.exports = {
         type: 'asset/source'
       },
       {
-        test: /\.(png|svg|jpeg|jpg|webp)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name].[hash][ext][query]'
+          filename: 'images/[hash][ext][query]'
         }
       },
       {
@@ -102,12 +86,14 @@ module.exports = {
 
 
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css'
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
 
-    // Index chunk
+    // Landing page
     new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
@@ -131,11 +117,14 @@ module.exports = {
 
     // раздел атлас ароматов
     new HtmlWebpackPlugin({
-      template: './src/aroma_atlas.html',
-      filename: './aroma_atlas.html',
-      chunks: ['index']
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/pages/page.html',
+      filename: './pages/page.html',
+      chunks: ['page']
     }),
-    // раздел статей
+
+    // HeaderMenu chunk
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',
