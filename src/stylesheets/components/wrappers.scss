@@ -4,3 +4,116 @@
   align-items: center;
   gap: 40px;
 }
+
+
+.W_H2AllButton {
+  display: flex;
+  align-items: flex-end;
+  gap: 7.71vw;
+
+    .M_H2All {
+      margin-left: 20.05vw; //385px
+
+        .Q_H2AllText {
+          inherits: h2;
+          &.Line2 {
+            font-style: italic;
+            margin-left: 6.77vw; //130px
+          }
+          
+          &.Line2_1 {
+            font-style: italic;
+            margin-left: 21vw; //389px
+          }
+        }
+
+    }
+}
+
+.W_ArticlesCards {
+  display: flex;
+  flex-direction: row;
+
+  .W_ArticlesCards_right {
+    margin-left: 1vw;
+    margin-top: 11.11vh;
+  }
+  
+
+  .W_ArticlesCards_left , .W_ArticlesCards_right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .O_CardArticle {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1.5px solid var(--wise-owl, #CCBBA3);
+      background: var(--book-paper, #FAF1E4);
+      // Отступы не работают
+      // padding-top: 1.85vh;
+      // padding-bottom: 1.85vh;
+      // padding-left: 1.04vw;
+      // padding-right: 1.04vw;
+      margin-bottom: 5.65vh;
+
+      width: 39.06vw;
+      
+
+      .M_Tags {
+        display: inline-flex;
+        justify-content: flex-start;
+        gap: 0.42vw;
+        margin-bottom: 1.5vh;
+        margin-top: 1.85vh;
+        margin-left: 1.04vw;
+        
+
+        .A_Tag {
+          font-size: 1.38rem;
+          font-family: "HelveticaNeueCyr";
+          color: #E78B5D;
+          border-radius: 4px;
+          border: 1.5px solid var(--warm_ceramics, #E78B5D);
+          background: var(--book-paper, #FAF1E4);
+          height: 4.07vh;
+          padding: 0px 0.83vw;
+          line-height: 4.07vh;
+
+          &:hover {
+            transition: 0.3s;
+            color: #fbe8c7;
+            background-color: #f19b70;
+          }
+        }
+      }
+
+      h3 {
+        display: flex;
+        margin-bottom: 1.85vh;
+        margin-left: 1.04vw;
+      }
+      
+
+      .A_ImageArticle {
+        width: 36.98vw;
+        height: 31.85vh;
+        margin-bottom: 1.85vh;
+        margin-left: 1.04vw;
+
+        img {
+          width: 36.98vw;
+          height: 31.85vh;
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+

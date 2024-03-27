@@ -8,6 +8,7 @@
 @import 'stylesheets/pop_culture.scss';
 @import 'stylesheets/articles.scss';
 @import 'stylesheets/tests.scss';
+@import 'stylesheets/footer_for_index.scss';
 
 @import 'stylesheets/components/quarks.scss';
 @import 'stylesheets/components/atoms.scss';
