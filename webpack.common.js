@@ -130,19 +130,19 @@ module.exports = {
     // внутряки для статей
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesHYGGE.html',
-      filename: './articlesHYGGE.html',
+      filename: './ARTICLES/articlesHYGGE.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesSPRING.html',
-      filename: './articlesSPRING.html',
+      filename: './ARTICLES/articlesSPRING.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesLESSSTRESS.html',
-      filename: './articlesLESSSTRESS.html',
+      filename: './ARTICLES/articlesLESSSTRESS.html',
       chunks: ['index']
     }),
 
