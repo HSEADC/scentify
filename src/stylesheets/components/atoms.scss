@@ -5,21 +5,23 @@
   align-items: center;
   color: var(--almost_black, #302B29);
   border-radius: 4px;
-  border: 1.5px solid var(--wise-owl, #CCBBA3);
+  border: 1.5px solid var(--wise_owl);
+}
+.A_Tag {
+  font-size: 1.38rem;
+  font-family: 'HelveticaNeueCyr';
+  line-height: 3.7vh;
+  color: var(--warm_ceramics, #e78b5d);
+  border-radius: 4px;
+  border: 1.5px solid var(--warm_ceramics, #e78b5d);
+  padding: 0 0.83vw;
+  background: var(--paper_card, #fffbf4);
 
-    h4 {
-      /* h4_Filtration */
-      font-family: "TT Livret Subhead";
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    &:hover {
-      transition: 0.3s;
-      color: var(--warm_ceramics, #E76423);
-    }
+  &:hover {
+    transition: 0.3s;
+    color: #fbe8c7;
+    background-color: #f19b70;
+  }
 }
 
 .A_BannerTextContent {
