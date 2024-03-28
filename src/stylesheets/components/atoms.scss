@@ -3,13 +3,13 @@
   padding: 6px 24px 10px 24px;
   justify-content: center;
   align-items: center;
-  color: var(--almost_black, #302B29);
+  color: var(--almost_black, #302b29);
   border-radius: 4px;
   border: 1.5px solid var(--wise_owl);
 }
 .A_Tag {
   font-size: 1.38rem;
-  font-family: 'HelveticaNeueCyr';
+  font-family: 'Helvetica Neue';
   line-height: 3.7vh;
   color: var(--warm_ceramics, #e78b5d);
   border-radius: 4px;
@@ -28,19 +28,19 @@
   margin: auto;
   font-size: 2.75rem;
   text-align: center;
-  
 
-  .Q_BannerText { 
+  .Q_BannerText {
     line-height: 115%;
     font-size: 2.75rem;
     font-weight: 400;
     font-family: 'TT Livret Subhead';
-    
+
     &.Line1 {
       font-style: normal;
     }
     &.Line2 {
-      font-style: italic;
+      //   font-style: italic;
+      font-family: 'TT Livret Subhead Italic';
     }
   }
 }
@@ -53,13 +53,13 @@
 
 .A_Tag {
   font-size: 1.38rem;
-  font-family: "HelveticaNeueCyr";
+  font-family: 'Helvetica Neue';
   line-height: 3.7vh;
-  color: var(--warm_ceramics, #E78B5D);
+  color: var(--warm_ceramics, #e78b5d);
   border-radius: 4px;
-  border: 1.5px solid var(--warm_ceramics, #E78B5D);
+  border: 1.5px solid var(--warm_ceramics, #e78b5d);
   padding: 0 0.83vw;
-  background: var(--paper_card, #FFFBF4);
+  background: var(--paper_card, #fffbf4);
 
   &:hover {
     transition: 0.3s;
@@ -93,7 +93,7 @@
 .A_TestTitle {
   display: flex;
   flex-direction: column;
-  align-items: center;        
+  align-items: center;
 }
 
 .A_Input {
@@ -102,16 +102,17 @@
   min-width: 288px;
   max-width: 490px;
   font-size: 22px;
-  padding: 14px 17px;  border-radius: 4px;
-  border: 1px solid var(--wise_owl, #CCBBA3);
-  background: var(--paper_card, #FFFBF4);
+  padding: 14px 17px;
+  border-radius: 4px;
+  border: 1px solid var(--wise_owl, #ccbba3);
+  background: var(--paper_card, #fffbf4);
 }
 
 .A_buttonPrimary {
   border-radius: 4px;
-  background: var(--dusty_brick, #E76423);
-  color: #FFFBF4;
-  font-family: "HelveticaNeueCyr";
+  background: var(--dusty_brick, #e76423);
+  color: #fffbf4;
+  font-family: 'Helvetica Neue';
   font-size: 22px;
   line-height: 22px;
   display: flex;
@@ -127,10 +128,9 @@
   &:hover {
     border-radius: 4px;
     transition: 0.3s;
-    background: var(--warm_ceramics, #E78B5D);
+    background: var(--warm_ceramics, #e78b5d);
   }
 }
-
 
 .A_ImageArticlePageCover {
   margin-top: 5.93vh;
@@ -145,54 +145,48 @@
   height: 100vh;
 
   border-radius: 1290.244px 1290.244px 10.322px 10.322px;
-  border: 3.871px solid var(--wise_owl, #CCBBA3);
-  background: var(--book-paper, #FAF1E4);
+  border: 3.871px solid var(--wise_owl, #ccbba3);
+  background: var(--book-paper, #faf1e4);
   position: absolute;
   // width: 1920px;
-  // height: 100%;  
+  // height: 100%;
   // fill: var(--book-paper, #FAF1E4);
   // stroke-width: 2px;
   // stroke: var(--wise_owl, #CCBBA3);
   z-index: -1;
-
 }
 
+.A_ArticleTitle {
+  color: var(--almost_black, #302b29);
 
-.A_ArticleTitle{
-  color: var(--almost_black, #302B29);
-  
   /* h1_Accent */
-  font-family: "TT Livret Subhead";
+  font-family: 'TT Livret Subhead';
   font-size: 100px;
   font-weight: 400;
-  line-height: 100%; /* 100px */ 
+  line-height: 100%; /* 100px */
 
   span:nth-child(1) {
     margin-left: 15.63vw;
-    font-style: italic;
+    // font-style: italic;
+    font-family: 'TT Livret Subhead Italic';
   }
-
 
   span:nth-child(2) {
     margin-left: 800px;
     margin-top: 3.7vh;
     font-style: normal;
   }
-
-
-
 }
 
-
 .A_ArticleTitleSubhead {
-  color: var(--almost_black, #302B29);
+  color: var(--almost_black, #302b29);
   margin-top: 9.54vh;
   margin-left: 18vw;
   margin-bottom: 10vh;
   width: 45.73vw;
-  
+
   /* h5_Lead */
-  font-family: HelveticaNeueCyr;
+  font-family: 'Helvetica Neue';
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -202,16 +196,10 @@
 .A_Razdelitel {
   height: 1vh;
   width: 100vw;
-  background-color: #FAF1E4;
+  background-color: #faf1e4;
   margin-left: -24vw;
   margin-top: 24vh;
-  background-color: #FAF1E4;
+  background-color: #faf1e4;
 
-  border-bottom: 1.5px solid var(--wise_owl, #CCBBA3);
-
-
+  border-bottom: 1.5px solid var(--wise_owl, #ccbba3);
 }
-
-
-
-

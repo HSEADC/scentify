@@ -12,19 +12,20 @@
 .M_H2All {
   margin-left: 20.05vw; //385px
 
-    .Q_H2AllText {
-      inherits: h2;
-      &.Line2 {
-        font-style: italic;
-        margin-left: 6.77vw; //130px
-      }
-      
-      &.Line2_1 {
-        font-style: italic;
-        margin-left: 21vw; //389px
-      }
+  .Q_H2AllText {
+    inherits: h2;
+    &.Line2 {
+      //   font-style: italic;
+      font-family: 'TT Livret Subhead Italic';
+      margin-left: 6.77vw; //130px
     }
 
+    &.Line2_1 {
+      //   font-style: italic;
+      font-family: 'TT Livret Subhead Italic';
+      margin-left: 21vw; //389px
+    }
+  }
 }
 
 .M_Tags {
@@ -33,43 +34,43 @@
   width: 100%;
   margin-top: 0.74vh;
 
-    .A_Tag {
-      font-size: 1.38rem;
-      font-family: "HelveticaNeueCyr";
-      line-height: 3.7vh;
-      color: var(--warm_ceramics, #E78B5D);
-      border-radius: 4px;
-      border: 1.5px solid var(--warm_ceramics, #E78B5D);
-      padding: 0 0.83vw;
-      background: var(--paper_card, #FFFBF4);
+  .A_Tag {
+    font-size: 1.38rem;
+    font-family: 'Helvetica Neue';
+    line-height: 3.7vh;
+    color: var(--warm_ceramics, #e78b5d);
+    border-radius: 4px;
+    border: 1.5px solid var(--warm_ceramics, #e78b5d);
+    padding: 0 0.83vw;
+    background: var(--paper_card, #fffbf4);
 
-      &:hover {
-        transition: 0.3s;
-        color: #fbe8c7;
-        background-color: #f19b70;
-      }
+    &:hover {
+      transition: 0.3s;
+      color: #fbe8c7;
+      background-color: #f19b70;
     }
-}
-
-
-.M_TestTitle {
-  margin-top: 5vh;
-  
-  .A_TestTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;        
   }
 }
 
-.M_NewsFooter , .M_Authors , .M_Curators {
+.M_TestTitle {
+  margin-top: 5vh;
+
+  .A_TestTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.M_NewsFooter,
+.M_Authors,
+.M_Curators {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .M_NewsFooter {
-
   & :nth-child(2) {
     margin-left: 2.6vw;
   }
@@ -77,7 +78,6 @@
   & :nth-child(3) {
     margin-left: 10.47vw;
   }
-
 }
 
 .M_Authors {
@@ -104,12 +104,11 @@
   }
 }
 
-.M_Curators , .M_Authors {
-
+.M_Curators,
+.M_Authors {
   a {
-    color: #302B29;
+    color: #302b29;
   }
-
 }
 
 .M_InputAndButton {
@@ -119,83 +118,79 @@
 }
 
 .M_AboutFooter {
-  color: var(--almost_black, #302B29);
+  color: var(--almost_black, #302b29);
 
   /* p */
-  font-family: HelveticaNeueCyr;
+  font-family: 'Helvetica Neue';
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 30.8px */}
+  line-height: 140%; /* 30.8px */
+}
 
+.M_ArticleTitle {
+  margin-top: 30.56vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+}
 
-  .M_ArticleTitle {
-    margin-top: 30.56vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    position: absolute;
+.M_SubtitleInner {
+  padding-left: 8vw;
+  width: 33.85vw;
+  color: var(--almost_black, #302b29);
 
+  /* h2 */
+  font-family: 'TT Livret Subhead';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 64px */
+}
 
+.M_Infocontent {
+  width: 45vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: var(--almost_black, #302b29);
+  padding-right: 6vw;
+
+  /* p */
+  font-family: 'Helvetica Neue';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+}
+
+.M_ImaGArticleContent {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6.02vh;
+  gap: 2vw;
+}
+
+.M_Conclusion {
+  display: block;
+  margin-left: -15vw;
+  width: 1532px;
+  height: 492px;
+  border-radius: 8px;
+  background: var(--paper_card, #fffbf4);
+
+  color: var(--almost_black, #302b29);
+
+  /* h3_CardHeader */
+  font-family: 'TT Livret Subhead';
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 50.6px */
+
+  h3 {
+    padding: 88px 101px 115px 260px;
   }
-
-  .M_SubtitleInner {
-    padding-left: 8vw;
-    width: 33.85vw;
-    color: var(--almost_black, #302B29);
-    
-    /* h2 */
-    font-family: "TT Livret Subhead";
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 64px */ 
-   }
-
-   .M_Infocontent {
-    width: 45vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    color: var(--almost_black, #302B29);
-    padding-right: 6vw;
-
-    /* p */
-    font-family: HelveticaNeueCyr;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 30.8px */   
-  }
-
-  .M_ImaGArticleContent {
-    display: flex;
-    flex-direction: row;
-    margin-top: 6.02vh;
-    gap: 2vw;
-  }
-
-  .M_Conclusion {
-    display: block;
-    margin-left: -15vw;
-    width: 1532px;
-    height: 492px;
-    border-radius: 8px;
-    background: var(--paper_card, #FFFBF4);
-
-
-    color: var(--almost_black, #302B29);
-    
-    /* h3_CardHeader */
-    font-family: "TT Livret Subhead";
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 115%; /* 50.6px */  
-
-    h3 {
-      padding: 88px 101px 115px 260px;
-    }
-  }
-
+}
