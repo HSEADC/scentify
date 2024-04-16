@@ -6,9 +6,11 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
 
+// при создании нового чанка сюда дописать
 module.exports = {
   entry: {
     index: './src/index.js',
+    searchVanilla: './src/search_vanilla.js',
     page: './src/page.jsx'
   },
   output: {
@@ -146,18 +148,6 @@ module.exports = {
       chunks: ['index']
     }),
 
-
-
-
-
-
-
-
-
-
-
-
-
     // раздел поп-культура
     new HtmlWebpackPlugin({
       template: './src/pop_culture.html',
@@ -169,6 +159,13 @@ module.exports = {
       template: './src/tests.html',
       filename: './tests.html',
       chunks: ['index']
+    }),
+    // и здесь подключать новый чанк
+    // chunk searchVanilla
+    new HtmlWebpackPlugin({
+      template: './src/search_vanilla.html',
+      filename: './search_vanilla.html',
+      chunks: ['searchVanilla']
     }),
 
     // Article
