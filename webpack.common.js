@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     searchVanilla: './src/search_vanilla.js',
+    reactBasics: './src/react_basics.jsx',
     page: './src/page.jsx'
   },
   output: {
@@ -166,6 +167,12 @@ module.exports = {
       template: './src/search_vanilla.html',
       filename: './search_vanilla.html',
       chunks: ['searchVanilla']
+    }),
+    // chunk reactBasics
+    new HtmlWebpackPlugin({
+      template: './src/react_basics.html',
+      filename: './react_basics.html',
+      chunks: ['reactBasics']
     }),
 
     // Article
