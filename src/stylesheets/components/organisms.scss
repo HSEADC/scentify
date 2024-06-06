@@ -405,3 +405,41 @@
     }
   }
 }
+
+.O_ContentLeft {
+  margin-top:8.15vh;
+}
+
+.O_ContentRight {
+  margin-top:8.15vh;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  .A_MainTXT { grid-area: 1 / 1 / 2 / 6; }
+  .A_ArtImage { grid-area: 2 / 1 / 3 / 4; }
+  .A_ArtImage2 { grid-area: 2 / 4 / 3 / 6; }
+
+
+  div:nth-child(2) {
+    margin-top: -5.56vh;
+  }
+  div:nth-child(3) {
+    margin-top: -5.56vh;
+  }
+}
+
+.O_ConclusionContent {
+  display: flex;
+  flex-direction: row;
+  gap: 53px;
+  
+
+  img {
+    height: 45px;
+    width: 49px;
+  }
+}

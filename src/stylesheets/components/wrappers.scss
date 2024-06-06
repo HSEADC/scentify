@@ -183,5 +183,39 @@
 // }
 
 .W_ArticleTitle {
+  width: 1300px;
+  height: 800px;
+  display: block;
+
+  margin: 0 auto;
+  margin-top: 300px;
   
+  h1 {
+    margin-left: 200px;
+
+    span {
+      margin-left: 400px;
+
+    }
+  }
+
+  h5 {
+    width: 850px;
+    margin-top: 40px;
+    margin-left: 360px;
+  }
+}
+
+.W_ContentArtBlockMain {
+  position: relative;
+}
+
+.W_Conclusion {
+  width: 79.79vw;
+  height: 45.56vh;
+  background: var(--paper_card, #FFFBF4);
+  border-radius: 8px;
+  margin-top: -370px;
+  margin-bottom: 60px;
+  padding: 88px 101px;
 }

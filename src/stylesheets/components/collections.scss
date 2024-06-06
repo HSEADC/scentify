@@ -305,7 +305,12 @@
 
   .A_ArcBg {
     width: 100%;
-    height: 89.81vh;
+    height: 100%;
     overflow: hidden;
+// подумать над тем как именно будет масштабироваться картинка??
+    img {
+      height: 98.15vh;
+      width: 100vw;
+    }
   }
 }

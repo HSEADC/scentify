@@ -207,3 +207,39 @@
 .A_CoverBgImg {
   margin: 0 auto;
 }
+
+.A_PartLine {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+
+  hr:nth-child(1) {
+    margin: 0;
+    width: 28vw;
+    height: 2px;
+    border: 1px solid var(--wise_owl);
+  }
+
+  hr:nth-child(3) {
+    margin: 0;
+    width: 50vw;
+    height: 2px;
+    border: 1px solid var(--wise_owl);
+  }
+
+  img {
+    height: 2.31vh;
+    width: 1.61vw;
+  }
+}
+
+.A_MainTXT {
+  display: block;
+}
+
+.A_ArtImage, .A_ArtImage2 {
+  margin-top: 30px;
+  height: 100%;
+}
