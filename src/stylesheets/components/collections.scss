@@ -314,3 +314,18 @@
     }
   }
 }
+
+.C_BlockSeleb {
+  margin-top: 3.7vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 37px;
+  grid-row-gap: 30px;
+
+  .O_CardStar { grid-area: 1 / 1 / 2 / 8; }
+  .O_CardStarSecType { grid-area: 1 / 8 / 2 / 13; }
+  .div3 { grid-area: 2 / 1 / 3 / 6; }
+  .div4 { grid-area: 2 / 6 / 3 / 13; }  
+
+}

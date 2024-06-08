@@ -149,6 +149,24 @@ module.exports = {
       chunks: ['index']
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesNOTESandACCORDS.html',
+      filename: './ARTICLES/articlesNOTESandACCORDS.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSUMMER.html',
+      filename: './ARTICLES/articlesSUMMER.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSELFMADE.html',
+      filename: './ARTICLES/articlesSELFMADE.html',
+      chunks: ['index']
+    }),
+
     // раздел поп-культура
     new HtmlWebpackPlugin({
       template: './src/pop_culture.html',
