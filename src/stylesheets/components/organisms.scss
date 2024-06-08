@@ -15,8 +15,8 @@
   border-radius: 4px;
   background: var(--paper_card, #fffbf4);
 
-  &.cinnamon {
-  }
+  // &.cinnamon {
+  // }
 
   .A_ImageLibrary {
     height: 100%;
@@ -441,5 +441,16 @@
   img {
     height: 45px;
     width: 49px;
+  }
+}
+
+
+.O_CardLiterature {
+  padding: 20px;
+  .M_Tags {
+    justify-content: left;
+    // margin-top: 20px;
+    // margin-left: 20px;
+    margin-bottom: 24px;
   }
 }
