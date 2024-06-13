@@ -164,17 +164,66 @@
   }
 }
 
-.W_ArticleContent {
+
+// Пока переписываю статью это не нужно
+
+// .W_ArticleContent {
+//   position: relative;
+// }
+
+// .W_Part {
+//   padding-right: 6vw;
+//   border-top: 1.5px #ccbba3;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   background-color: #faf1e4;
+//   margin: 70px 0px 131px -200px;
+//   gap: 17vw;
+// }
+
+.W_ArticleTitle {
+  width: 1300px;
+  height: 800px;
+  display: block;
+
+  margin: 0 auto;
+  margin-top: 300px;
+  
+  h1 {
+    margin-left: 200px;
+
+    span {
+      margin-left: 400px;
+
+    }
+  }
+
+  h5 {
+    width: 850px;
+    margin-top: 40px;
+    margin-left: 360px;
+  }
+}
+
+.W_ContentArtBlockMain {
   position: relative;
 }
 
-.W_Part {
-  padding-right: 6vw;
-  border-top: 1.5px #ccbba3;
+.W_Conclusion {
+  width: 79.79vw;
+  height: 45.56vh;
+  background: var(--paper_card, #FFFBF4);
+  border-radius: 8px;
+  margin-top: -370px;
+  margin-bottom: 60px;
+  padding: 88px 101px;
+}
+
+
+.W_CardLitContent {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  background-color: #faf1e4;
-  margin: 70px 0px 131px -200px;
-  gap: 17vw;
+  
+ 
 }

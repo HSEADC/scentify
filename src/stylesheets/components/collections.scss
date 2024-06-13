@@ -147,6 +147,7 @@
   align-items: flex-start;
 
   .O_CardStar {
+    overflow: hidden;
     display: flex;
     border-radius: 4px;
     border: 1px solid var(--wise-owl, #ccbba3);
@@ -186,6 +187,7 @@
     h3 {
       margin-top: 29.72vh;
       margin-left: 1.04vw;
+      margin-bottom: 1vw;
       text-align: left;
       width: 15vw;
     }
@@ -252,7 +254,7 @@
 
 .C_CardsArticle {
   display: flex;
-  width: 1530px;
+  width: 100%;
   align-items: flex-start;
   align-content: flex-start;
   gap: 30px;
@@ -287,4 +289,84 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: #faf1e4;
+}
+
+.C_CoverBgImg {
+  position: absolute;
+  margin-top: 6vh;
+  z-index: -2;
+}
+
+.C_ArcBg {
+  margin-top: 9vh;
+  position: absolute;
+  margin-left: -10.16vw;
+  z-index: -1;
+
+  .A_ArcBg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+// подумать над тем как именно будет масштабироваться картинка??
+    img {
+      height: 98.15vh;
+      width: 100vw;
+    }
+  }
+}
+
+.C_BlockSeleb {
+  margin-top: 3.7vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 37px;
+  grid-row-gap: 30px;
+
+  .O_CardStarSecType {
+    margin-top: 0px;
+    margin-left: 0px;
+
+    .M_Tags {
+      justify-content: left;
+    }
+  }
+
+  .O_CardStar {
+    .M_Tags {
+      justify-content: left;
+    }
+  }
+
+  .O_CardStar { grid-area: 1 / 1 / 2 / 8; }
+  .O_CardStarSecType { grid-area: 1 / 8 / 2 / 13; }
+  .O_CardStarSecType:nth-of-type(3) { grid-area: 2 / 1 / 3 / 6; }
+  .O_CardStar:nth-of-type(4) { grid-area: 2 / 6 / 3 / 13; }  
+
+}
+
+
+.C_BlockLiterature {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  margin-top: 35px;
+
+  .O_CardLiterature {
+    width: 490px;
+    height: 345px;
+    border-radius: 4px;
+    background-color: var(--paper_card, #FFFBF4);
+  }
+
+  .O_CardLiterature { grid-area: 1 / 1 / 2 / 5; }
+  .O_CardLiterature:nth-of-type(2) { grid-area: 1 / 5 / 2 / 9; }
+  .O_CardLiterature:nth-of-type(3) { grid-area: 1 / 9 / 2 / 13; }
+  .O_CardLiterature:nth-of-type(4) { grid-area: 2 / 1 / 3 / 5; }
+  .O_CardLiterature:nth-of-type(5) { grid-area: 2 / 5 / 3 / 9; }
+  .O_CardLiterature:nth-of-type(6) { grid-area: 2 / 9 / 3 / 13; }  
+
 }
