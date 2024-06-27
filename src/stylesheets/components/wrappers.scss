@@ -235,4 +235,10 @@
 .W_TestShowDescr {
   display: flex;
   flex-direction: column;
+
+  .M_Tags {
+    .A_Tag {
+      background-color: var(--book-paper, #FAF1E4); 
+    }
+  }
 }

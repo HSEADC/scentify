@@ -492,3 +492,40 @@
     margin-top: 70px;
   }
 }
+
+.O_CardTest {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow: hidden;
+
+
+
+
+  .M_Tags {
+    justify-content: left;
+    z-index: 1;
+
+    .A_Tag {
+      background-color: var(--book-paper, #FAF1E4); 
+    }
+  }
+
+  .A_CardImg {
+    display: block;
+    align-content: center;
+    margin: 0 auto;
+    margin-top: -20px;
+
+
+    img {
+      display: block;
+      align-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  
+  
+
+}
