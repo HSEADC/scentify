@@ -529,3 +529,17 @@
   
 
 }
+
+.O_SimilarScentCards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+
+  .O_CardScent { grid-area: 1 / 1 / 2 / 4; }
+  .O_CardScent:nth-of-type(2) { grid-area: 1 / 4 / 2 / 7; }
+  .O_CardScent:nth-of-type(3) { grid-area: 1 / 7 / 2 / 10; }
+  .O_CardScent:nth-of-type(4) { grid-area: 1 / 10 / 2 / 13; }
+}
