@@ -115,7 +115,13 @@ module.exports = {
     //   filename: './about.html',
     //   chunks: ['index']
     // }),
-
+    // new HtmlWebpackPlugin({
+    //   template: './src/javascript/pop_cilture_filtration.js',
+    //   filename: './javascript/pop_cilture_filtration.js',
+    //   chunks: ['index']
+    // }),
+    
+    
     // раздел атлас ароматов
     new HtmlWebpackPlugin({
       template: './src/aroma_atlas.html',
@@ -127,6 +133,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/NOTES/note_Cinnamon.html',
       filename: './NOTES/note_Cinnamon.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/NOTES/note_Jasmine.html',
+      filename: './NOTES/note_Jasmine.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/NOTES/note_PaloSanto.html',
+      filename: './NOTES/note_PaloSanto.html',
       chunks: ['index']
     }),
 
