@@ -15,6 +15,10 @@
   border-radius: 4px;
   background: var(--paper_card, #fffbf4);
 
+  .hidden {
+    display: none;
+  }
+
   // &.cinnamon {
   // }
 
@@ -195,6 +199,10 @@
   border-radius: 4px;
   border: 1px solid var(--wise-owl, #ccbba3);
 
+  .hidden {
+    display: none;
+  }
+
   .M_Tags {
     display: inline-flex;
     gap: 0.42vw;
@@ -241,6 +249,10 @@
   flex-direction: column;
   border-radius: 4px;
   border: 1px solid var(--wise-owl, #ccbba3);
+
+  .hidden {
+    display: none;
+  }
 
   .W_CardStarUpContent {
     display: flex;
@@ -447,6 +459,10 @@
 
 .O_CardLiterature {
   padding: 20px;
+
+  .hidden {
+    display: none;
+  }
   .M_Tags {
     justify-content: left;
     // margin-top: 20px;
