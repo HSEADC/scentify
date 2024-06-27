@@ -12,6 +12,10 @@ module.exports = {
     index: './src/index.js',
     searchVanilla: './src/search_vanilla.js',
     reactBasics: './src/react_basics.jsx',
+    filterpopcult: './src/javascript/pop_cilture_filtration.js',
+    partsheader:'./src/header_data.js',
+    partsheade2:'./src/header.js',
+    header:'./src/header.jsx',
     page: './src/page.jsx'
   },
   output: {
@@ -98,7 +102,7 @@ module.exports = {
       scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     //  Guideline
@@ -126,26 +130,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/aroma_atlas.html',
       filename: './aroma_atlas.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     // внутряки для атласа
     new HtmlWebpackPlugin({
       template: './src/NOTES/note_Cinnamon.html',
       filename: './NOTES/note_Cinnamon.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/NOTES/note_Jasmine.html',
       filename: './NOTES/note_Jasmine.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/NOTES/note_PaloSanto.html',
       filename: './NOTES/note_PaloSanto.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
 
@@ -153,57 +157,57 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     // внутряки для статей
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesHYGGE.html',
       filename: './ARTICLES/articlesHYGGE.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesSPRING.html',
       filename: './ARTICLES/articlesSPRING.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesLESSSTRESS.html',
       filename: './ARTICLES/articlesLESSSTRESS.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesNOTESandACCORDS.html',
       filename: './ARTICLES/articlesNOTESandACCORDS.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesSUMMER.html',
       filename: './ARTICLES/articlesSUMMER.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/ARTICLES/articlesSELFMADE.html',
       filename: './ARTICLES/articlesSELFMADE.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
 
     // раздел поп-культура
     new HtmlWebpackPlugin({
       template: './src/pop_culture.html',
       filename: './pop_culture.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
     // раздел тесты
     new HtmlWebpackPlugin({
       template: './src/tests.html',
       filename: './tests.html',
-      chunks: ['index']
+      chunks: ['index', 'header']
     }),
     // и здесь подключать новый чанк
     // chunk searchVanilla

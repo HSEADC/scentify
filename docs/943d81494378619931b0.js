@@ -29,45 +29,39 @@
 //   });
 // });
 
-
 function filterTag(tag) {
-  const cards = document.querySelectorAll(
-    '.O_CardLiterature, .O_CardStar, .O_CardStarSecType, .O_CardChar'
-  )
-  const block = document.querySelector('.C_BlockCharacters, .C_BlockLiterature, C_BlockSeleb')
-
-  console.log(cards)
-  cards.forEach((card) => {
-    const tags = card.getAttribute('data-tags')
-
+  var cards = document.querySelectorAll('.O_CardLiterature, .O_CardStar, .O_CardStarSecType, .O_CardChar');
+  var block = document.querySelector('.C_BlockCharacters, .C_BlockLiterature, C_BlockSeleb');
+  console.log(cards);
+  cards.forEach(function (card) {
+    var tags = card.getAttribute('data-tags');
     if (tags && tags.split(',').includes(tag)) {
-      card.style.display = ''
+      card.style.display = '';
     } else {
-      card.style.display = 'none'
+      card.style.display = 'none';
     }
-  })
+  });
 }
-
 document.addEventListener('DOMContentLoaded', function () {
-  const filterTags = document.querySelectorAll('.A_Filter, .A_Tag')
-
-  filterTags.forEach((tag) => {
+  var filterTags = document.querySelectorAll('.A_Filter, .A_Tag');
+  filterTags.forEach(function (tag) {
     tag.addEventListener('click', function () {
-      const selectedTag = this.innerText.trim()
+      var selectedTag = this.innerText.trim();
       if (this.classList.contains('active')) {
-        filterTags.forEach((tag) => tag.classList.remove('active'))
-        const cards = document.querySelectorAll(
-          '.O_CardLiterature, .O_CardStar, .O_CardStarSecType, .O_CardChar'
-        )
-        cards.forEach((card) => {
-          card.style.display = ''
-        })
+        filterTags.forEach(function (tag) {
+          return tag.classList.remove('active');
+        });
+        var cards = document.querySelectorAll('.O_CardLiterature, .O_CardStar, .O_CardStarSecType, .O_CardChar');
+        cards.forEach(function (card) {
+          card.style.display = '';
+        });
       } else {
-        filterTag(selectedTag)
-
-        filterTags.forEach((tag) => tag.classList.remove('active'))
-        this.classList.add('active')
+        filterTag(selectedTag);
+        filterTags.forEach(function (tag) {
+          return tag.classList.remove('active');
+        });
+        this.classList.add('active');
       }
-    })
-  })
-})
+    });
+  });
+});
