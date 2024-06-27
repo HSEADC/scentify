@@ -195,3 +195,30 @@
     padding: 88px 101px 115px 260px;
   }
 }
+
+.M_HeaderTags {
+  display: flex;
+  flex-direction: column;
+
+  .M_Tags {
+    margin-top: 30px;
+    justify-content: start;
+
+    .A_Tag {
+      background: var(--book-paper, #FAF1E4);
+    }
+  }
+}
+
+.M_HeaderDescr {
+  width: 32.29vw;
+  margin-left: 15.63vw;
+}
+
+.M_SimilarTitle {
+  border-top: 1px solid #ccbba3;
+
+  h2 {
+    margin-top: 26px;
+  }
+}

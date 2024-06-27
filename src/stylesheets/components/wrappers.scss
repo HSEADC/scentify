@@ -242,3 +242,37 @@
     }
   }
 }
+
+.W_NotesTitleInf {
+  margin: 0 auto;
+  padding: 0 87px;
+  margin-top: 280px;
+  align-items: center;
+  width: 1450px;
+  height: 280px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.W_NoteBigBlock {
+  margin-top: 5.93vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+
+  .A_NoteArtImg { grid-area: 1 / 1 / 4 / 4; }
+  .A_NoteSubDescr { grid-area: 4 / 1 / 5 / 4; }
+  .A_NoteText { grid-area: 1 / 4 / 3 / 10; }
+  .A_NoteArtImg2 { grid-area: 3 / 4 / 6 / 7; }
+  .A_NoteSubDescr2 { grid-area: 6 / 4 / 7 / 7; }
+  .A_NoteText2 { grid-area: 3 / 7 / 7 / 13; }
+
+}
+
+.W_NotesSimilar {
+  margin-top: 120px;
+}

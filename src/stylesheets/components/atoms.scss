@@ -91,6 +91,15 @@
   }
 }
 
+.A_CoverBgNotesImg {
+  width: 79.69vw;
+  height: 20.83vw;
+
+  img {
+    width: 79.69vw;
+    height: 20.83vw;  }
+}
+
 // .A_ImageSeleb1 {
 //   width: 29.64vw;
 //   height: 43.61vh;
@@ -253,4 +262,18 @@
 .A_ArtImage, .A_ArtImage2 {
   margin-top: 30px;
   height: 100%;
+}
+
+.A_NoteText2 {
+  p:nth-child(1) {
+    margin-bottom: 40px;
+  }
+}
+
+.A_NoteArtImg2, .A_NoteText2 {
+  margin-top: 50px;
+}
+
+.A_NoteSubDescr {
+  margin-top: -45px;
 }
