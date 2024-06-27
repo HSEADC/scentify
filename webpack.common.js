@@ -123,6 +123,14 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // внутряки для атласа
+    new HtmlWebpackPlugin({
+      template: './src/NOTES/note_Cinnamon.html',
+      filename: './NOTES/note_Cinnamon.html',
+      chunks: ['index']
+    }),
+
+
     // раздел статей
     new HtmlWebpackPlugin({
       template: './src/articles.html',

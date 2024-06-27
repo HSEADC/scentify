@@ -297,6 +297,24 @@
   z-index: -2;
 }
 
+.C_CoverBgNotesImg {
+  position: absolute;
+  margin-top: 5.93vh;
+  z-index: -2;
+}
+
+.C_NotesTitleCard {
+  position: absolute;
+  z-index: -1;
+  margin-top: 25.56vh;
+  width: 1450px;
+  height: 280px;
+  border-radius: 4px;
+  border: 1.5px solid var(--wise_owl, #CCBBA3);
+  background: var(--book-paper, #FAF1E4);
+  margin-left: 2.08vw;
+}
+
 .C_ArcBg {
   margin-top: 9vh;
   position: absolute;
