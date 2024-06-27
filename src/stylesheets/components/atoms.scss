@@ -6,6 +6,15 @@
   color: var(--almost_black, #302b29);
   border-radius: 4px;
   border: 1.5px solid var(--wise_owl);
+
+  &:hover {
+    transition: 0.3s;
+    color: var(--warm_ceramics, #e76423);
+  }
+
+  .active {
+    color: var(--warm_ceramics, #e76423);
+  }
 }
 .A_Tag {
   font-size: 1.38rem;
