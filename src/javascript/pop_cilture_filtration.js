@@ -41,7 +41,7 @@ function filterTag(tag) {
     const tags = card.getAttribute('data-tags')
 
     if (tags && tags.split(',').includes(tag)) {
-      card.style.display = 'block'
+      card.style.display = ''
     } else {
       card.style.display = 'none'
     }
