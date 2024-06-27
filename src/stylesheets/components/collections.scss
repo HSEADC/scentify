@@ -1,0 +1,367 @@
+.С_CardsNotes {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.C_CardOnMain {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1.56vw;
+  display: flex;
+  margin-top: 5vh;
+
+  .O_CardScent {
+    width: 18.75vw;
+    height: 100%;
+    padding-bottom: 3vh;
+    border-radius: 4px;
+    background-color: var(--paper_card, #fffbf4);
+    justify-content: center;
+    overflow: hidden;
+
+    .A_ImageLibrary {
+      height: 100%;
+      width: 100%;
+      display: flex;
+    }
+
+    .M_Tags {
+      display: inline-flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 0.74vh;
+
+      .A_Tag {
+        font-size: 1.38rem;
+        font-family: 'Helvetica Neue';
+        line-height: 3.7vh;
+        color: var(--warm_ceramics, #e78b5d);
+        border-radius: 4px;
+        border: 1.5px solid var(--warm_ceramics, #e78b5d);
+        padding: 0 0.83vw;
+        background: var(--paper_card, #fffbf4);
+
+        &:hover {
+          transition: 0.3s;
+          color: #fbe8c7;
+          background-color: #f19b70;
+        }
+      }
+    }
+  }
+}
+
+.C_MainPageArticles {
+  display: flex;
+  margin-top: 5vh;
+  overflow: hidden;
+
+  .W_ArticlesCards {
+    display: flex;
+    flex-direction: row;
+
+    .W_ArticlesCards_right {
+      margin-left: 1vw;
+      margin-top: 11.11vh;
+    }
+
+    .W_ArticlesCards_left,
+    .W_ArticlesCards_right {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .O_CardArticle {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 4px;
+        border: 1.5px solid var(--wise-owl, #ccbba3);
+        background: var(--book-paper, #faf1e4);
+        // Отступы не работают
+        // padding-top: 1.85vh;
+        // padding-bottom: 1.85vh;
+        // padding-left: 1.04vw;
+        // padding-right: 1.04vw;
+        margin-bottom: 5.65vh;
+
+        width: 39.06vw;
+
+        .M_Tags {
+          display: inline-flex;
+          gap: 0.42vw;
+          margin-bottom: 1.5vh;
+          margin-top: 1.85vh;
+          margin-left: 1.04vw;
+
+          .A_Tag {
+            font-size: 1.38rem;
+            font-family: 'Helvetica Neue';
+            color: #e78b5d;
+            border-radius: 4px;
+            border: 1.5px solid var(--warm_ceramics, #e78b5d);
+            background: var(--book-paper, #faf1e4);
+            height: 4.07vh;
+            padding: 0px 0.83vw;
+            line-height: 4.07vh;
+
+            &:hover {
+              transition: 0.3s;
+              color: #fbe8c7;
+              background-color: #f19b70;
+            }
+          }
+        }
+
+        h3 {
+          display: flex;
+          margin-bottom: 1.85vh;
+          margin-left: 1.04vw;
+        }
+
+        .A_ImageArticle {
+          width: 36.98vw;
+          height: 31.85vh;
+          margin-bottom: 1.85vh;
+          margin-left: 1.04vw;
+
+          img {
+            width: 36.98vw;
+            height: 31.85vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+.C_MainPageCelebrity {
+  display: flex;
+  margin-top: 5vh;
+  overflow: hidden;
+  align-content: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  .O_CardStar {
+    overflow: hidden;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid var(--wise-owl, #ccbba3);
+
+    .M_Tags {
+      display: inline-flex;
+      gap: 0.42vw;
+      margin-bottom: 1.5vh;
+      margin-top: 1.85vh;
+      margin-left: 1.04vw;
+      justify-content: flex-start;
+
+      .A_Tag {
+        font-size: 1.38rem;
+        font-family: 'Helvetica Neue';
+        color: #e78b5d;
+        border-radius: 4px;
+        border: 1.5px solid var(--warm_ceramics, #e78b5d);
+        background: var(--book-paper, #faf1e4);
+        height: 4.07vh;
+        padding: 0px 0.83vw;
+        line-height: 4.07vh;
+
+        &:hover {
+          transition: 0.3s;
+          color: #fbe8c7;
+          background-color: #f19b70;
+        }
+      }
+    }
+
+    .A_ImageSeleb1 {
+      width: 29.64vw;
+      height: 43.61vh;
+    }
+
+    h3 {
+      margin-top: 29.72vh;
+      margin-left: 1.04vw;
+      margin-bottom: 1vw;
+      text-align: left;
+      width: 15vw;
+    }
+  }
+
+  .O_CardStarSecType {
+    margin-left: 1.56vw;
+    margin-top: 11.11vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid var(--wise-owl, #ccbba3);
+
+    .W_CardStarUpContent {
+      display: flex;
+      flex-direction: row;
+      gap: 1.3vw;
+
+      .A_ImageSeleb1 {
+        margin-bottom: 1.5vh;
+        margin-top: 1.85vh;
+        margin-right: 1.04vw;
+      }
+    }
+
+    .W_CardStarBottomContent {
+      width: 22vw;
+      margin-top: 6.2vh;
+      margin-left: 1.04vw;
+
+      h3 {
+        text-align: left;
+        margin-bottom: 1.85vh;
+      }
+    }
+
+    .M_Tags {
+      display: inline-flex;
+      gap: 0.42vw;
+      margin-bottom: 1.5vh;
+      margin-top: 1.85vh;
+      margin-left: 1.04vw;
+
+      .A_Tag {
+        font-size: 1.38rem;
+        font-family: 'Helvetica Neue';
+        color: #e78b5d;
+        border-radius: 4px;
+        border: 1.5px solid var(--warm_ceramics, #e78b5d);
+        background: var(--book-paper, #faf1e4);
+        height: 4.07vh;
+        padding: 0px 0.83vw;
+        line-height: 4.07vh;
+
+        &:hover {
+          transition: 0.3s;
+          color: #fbe8c7;
+          background-color: #f19b70;
+        }
+      }
+    }
+  }
+}
+
+.C_CardsArticle {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .O_CardArticle {
+    margin-bottom: 0;
+
+    h3 {
+      color: var(--almost_black, #302b29);
+
+      /* h3_CardHeader */
+      font-family: 'TT Livret Subhead';
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 115%; /* 50.6px */
+    }
+  }
+}
+
+.C_ArticleContent {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
+  width: 100%;
+  // position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #faf1e4;
+}
+
+.C_CoverBgImg {
+  position: absolute;
+  margin-top: 6vh;
+  z-index: -2;
+}
+
+.C_ArcBg {
+  margin-top: 9vh;
+  position: absolute;
+  margin-left: -10.16vw;
+  z-index: -1;
+
+  .A_ArcBg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+// подумать над тем как именно будет масштабироваться картинка??
+    img {
+      height: 98.15vh;
+      width: 100vw;
+    }
+  }
+}
+
+.C_BlockSeleb {
+  margin-top: 3.7vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 37px;
+  grid-row-gap: 30px;
+
+  .O_CardStarSecType {
+    margin-top: 0px;
+    margin-left: 0px;
+
+    .M_Tags {
+      justify-content: left;
+    }
+  }
+
+  .O_CardStar {
+    .M_Tags {
+      justify-content: left;
+    }
+  }
+
+  .O_CardStar { grid-area: 1 / 1 / 2 / 8; }
+  .O_CardStarSecType { grid-area: 1 / 8 / 2 / 13; } 
+
+}
+
+
+.C_BlockLiterature {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  margin-top: 35px;
+
+  .O_CardLiterature {
+    width: 490px;
+    height: 345px;
+    border-radius: 4px;
+    background-color: var(--paper_card, #FFFBF4);
+  }
+
+  .O_CardLiterature { grid-area: 1 / 1 / 2 / 5; }
+  .O_CardLiterature:nth-of-type(2) { grid-area: 1 / 5 / 2 / 9; }
+  .O_CardLiterature:nth-of-type(3) { grid-area: 1 / 9 / 2 / 13; }  
+
+}

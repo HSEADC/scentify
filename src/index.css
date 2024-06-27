@@ -8,3 +8,14 @@
 @import 'stylesheets/pop_culture.scss';
 @import 'stylesheets/articles.scss';
 @import 'stylesheets/tests.scss';
+@import 'stylesheets/articlesHYGGE.scss';
+
+@import 'stylesheets/footer_for_index.scss';
+
+@import 'stylesheets/components/quarks.scss';
+@import 'stylesheets/components/atoms.scss';
+@import 'stylesheets/components/molecules.scss';
+@import 'stylesheets/components/organisms.scss';
+@import 'stylesheets/components/collections.scss';
+@import 'stylesheets/components/wrappers.scss';
+@import 'stylesheets/components/super_organisms.scss';

@@ -32,7 +32,7 @@ body.index {
   p {
     color: var(--almost-black);
     /* p_Maintext */
-    font-family: HelveticaNeueCyr;
+    font-family: "helveticaneuecyr_roman";
     font-size: 1.38rem;
     font-style: normal;
     font-weight: 400;
@@ -48,7 +48,7 @@ body.index {
   a {
     text-decoration: none;
     color: var(--almost-black, #E78B5D);
-    font: Helvetica;
+    font-family: "HelveticaNeueCyr";
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
@@ -258,228 +258,417 @@ body.index {
 
 
     // Баннер с описанием а что вообще это такое
-    .O_BannerAbout {
-      width: 100%;
-      display: flex;
+    // .O_BannerAbout {
+    //   width: 100%;
+    //   display: flex;
   
-      .A_BannerImageContent {
-        margin: auto 0;
-        width: 18.75vw;
-        height: 29.63vh;
-        overflow: hidden;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-      }
+    //   .A_BannerImageContent {
+    //     margin: auto 0;
+    //     width: 18.75vw;
+    //     height: 29.63vh;
+    //     overflow: hidden;
+    //     display: flex;
+    //     align-content: center;
+    //     justify-content: center;
+    //   }
   
-      .A_BannerTextContent {
-        margin: auto;
-        font-size: 2.75rem;
-        text-align: center;
+    //   .A_BannerTextContent {
+    //     margin: auto;
+    //     font-size: 2.75rem;
+    //     text-align: center;
         
   
-        .Q_BannerText { 
-          line-height: 115%;
-          font-size: 2.75rem;
-          font-weight: 400;
-          font-family: 'TT Livret Subhead';
+    //     .Q_BannerText { 
+    //       line-height: 115%;
+    //       font-size: 2.75rem;
+    //       font-weight: 400;
+    //       font-family: 'TT Livret Subhead';
           
-          &.Line1 {
-            font-style: normal;
-          }
-          &.Line2 {
-            font-style: italic;
-          }
-        }
-      }
-    }
+    //       &.Line1 {
+    //         font-style: normal;
+    //       }
+    //       &.Line2 {
+    //         font-style: italic;
+    //       }
+    //     }
+    //   }
+    // }
 
     // Блок про библиотеку ароматов
 
-    .SO_NotesMainPage {
-      width: 100%;
-      margin: 6vh 0;
+    // .SO_NotesMainPage {
+    //   width: 100%;
+    //   margin: 6vh 0;
 
 
-        .W_H2AllButton {
-          display: flex;
-          align-items: flex-end;
-          gap: 7.71vw;
+    //     .W_H2AllButton {
+    //       display: flex;
+    //       align-items: flex-end;
+    //       gap: 7.71vw;
 
-            .M_H2All {
-              margin-left: 20.05vw; //385px
+    //         .M_H2All {
+    //           margin-left: 20.05vw; //385px
 
-                .Q_H2AllText {
-                  inherits: h2;
-                  &.Line2 {
-                    font-style: italic;
-                    margin-left: 6.77vw; //130px
-                  }
+    //             .Q_H2AllText {
+    //               inherits: h2;
+    //               &.Line2 {
+    //                 font-style: italic;
+    //                 margin-left: 6.77vw; //130px
+    //               }
                   
-                  &.Line2_1 {
-                    font-style: italic;
-                    margin-left: 21vw; //389px
-                  }
-                }
+    //               &.Line2_1 {
+    //                 font-style: italic;
+    //                 margin-left: 21vw; //389px
+    //               }
+    //             }
 
-            }
-        }
-    }
+    //         }
+    //     }
+
+    //     .PopCult {
+    //       gap: 13.8vw;        
+    //     }
+
+    //     .Library {
+    //       gap: 6vw;        
+    //     }
+    // }
 
 
 
     // Стили для карточек с ароматами
 
-    .C_CardOnMain {
-      width: 100%;
-      justify-content: space-between;
-      gap: 1.56vw;
-      display: flex;
-      margin-top: 5vh;
+    // .C_CardOnMain {
+    //   width: 100%;
+    //   justify-content: space-between;
+    //   gap: 1.56vw;
+    //   display: flex;
+    //   margin-top: 5vh;
       
 
-        .O_CardScent {
-          width: 18.75vw;
-          height: 100%;
-          padding-bottom: 3vh;
-          border-radius: 4px;
-          background-color: var(--paper_card, #FFFBF4);
-          justify-content: center;
-          overflow: hidden;
+    //     .O_CardScent {
+    //       width: 18.75vw;
+    //       height: 100%;
+    //       padding-bottom: 3vh;
+    //       border-radius: 4px;
+    //       background-color: var(--paper_card, #FFFBF4);
+    //       justify-content: center;
+    //       overflow: hidden;
 
 
-            .A_ImageLibrary {
-              height: 100%;
-              width: 100%;
-              display: flex;
-            }
+    //         .A_ImageLibrary {
+    //           height: 100%;
+    //           width: 100%;
+    //           display: flex;
+    //         }
 
-            .M_Tags {
-              display: inline-flex;
-              justify-content: center;
-              width: 100%;
-              margin-top: 0.74vh;
+    //         .M_Tags {
+    //           display: inline-flex;
+    //           justify-content: center;
+    //           width: 100%;
+    //           margin-top: 0.74vh;
 
-                .A_Tag {
-                  font-size: 1.38rem;
-                  line-height: 3.7vh;
-                  color: var(--warm_ceramics, #E78B5D);
-                  border-radius: 4px;
-                  border: 1.5px solid var(--warm_ceramics, #E78B5D);
-                  padding: 0 0.83vw;
-                  background: var(--paper_card, #FFFBF4);
+    //             .A_Tag {
+    //               font-size: 1.38rem;
+    //               font-family: "HelveticaNeueCyr";
+    //               line-height: 3.7vh;
+    //               color: var(--warm_ceramics, #E78B5D);
+    //               border-radius: 4px;
+    //               border: 1.5px solid var(--warm_ceramics, #E78B5D);
+    //               padding: 0 0.83vw;
+    //               background: var(--paper_card, #FFFBF4);
 
-                  &:hover {
-                    transition: 0.3s;
-                    color: #fbe8c7;
-                    background-color: #f19b70;
-                  }
-                }
-            }
-        }
-    }
+    //               &:hover {
+    //                 transition: 0.3s;
+    //                 color: #fbe8c7;
+    //                 background-color: #f19b70;
+    //               }
+    //             }
+    //         }
+    //     }
+    // }
 
     // Стили для карточек статей
 
-    .C_MainPageArticles {
-      display: flex;
-      margin-top: 5vh;
-      overflow: hidden;
+    // .C_MainPageArticles {
+    //   display: flex;
+    //   margin-top: 5vh;
+    //   overflow: hidden;
 
-      .W_ArticlesCards {
-        display: flex;
-        flex-direction: row;
+    //   .W_ArticlesCards {
+    //     display: flex;
+    //     flex-direction: row;
 
-        .W_ArticlesCards_right {
-          margin-left: 1vw;
-          margin-top: 11.11vh;
-        }
+    //     .W_ArticlesCards_right {
+    //       margin-left: 1vw;
+    //       margin-top: 11.11vh;
+    //     }
         
 
-        .W_ArticlesCards_left , .W_ArticlesCards_right {
-          display: flex;
-          flex-direction: column;
+    //     .W_ArticlesCards_left , .W_ArticlesCards_right {
+    //       display: flex;
+    //       flex-direction: column;
+    //       height: 100%;
 
-          .O_CardArticle {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: 4px;
-            border: 1.5px solid var(--wise-owl, #CCBBA3);
-            background: var(--book-paper, #FAF1E4);
-            // Отступы не работают
-            // padding-top: 1.85vh;
-            // padding-bottom: 1.85vh;
-            // padding-left: 1.04vw;
-            // padding-right: 1.04vw;
-            margin-bottom: 5.65vh;
+    //       .O_CardArticle {
+    //         display: flex;
+    //         flex-direction: column;
+    //         overflow: hidden;
+    //         border-radius: 4px;
+    //         border: 1.5px solid var(--wise-owl, #CCBBA3);
+    //         background: var(--book-paper, #FAF1E4);
+    //         // Отступы не работают
+    //         // padding-top: 1.85vh;
+    //         // padding-bottom: 1.85vh;
+    //         // padding-left: 1.04vw;
+    //         // padding-right: 1.04vw;
+    //         margin-bottom: 5.65vh;
 
-            width: 39.06vw;
+    //         width: 39.06vw;
             
 
-            .M_Tags {
-              display: inline-flex;
-              gap: 0.42vw;
-              margin-bottom: 1.5vh;
-              margin-top: 1.85vh;
-              margin-left: 1.04vw;
+    //         .M_Tags {
+    //           display: inline-flex;
+    //           gap: 0.42vw;
+    //           margin-bottom: 1.5vh;
+    //           margin-top: 1.85vh;
+    //           margin-left: 1.04vw;
               
 
-              .A_Tag {
-                font-size: 1.38rem;
-                color: #E78B5D;
-                border-radius: 4px;
-                border: 1.5px solid var(--warm_ceramics, #E78B5D);
-                background: var(--book-paper, #FAF1E4);
-                height: 4.07vh;
-                padding: 0px 0.83vw;
-                line-height: 4.07vh;
+    //           .A_Tag {
+    //             font-size: 1.38rem;
+    //             font-family: "HelveticaNeueCyr";
+    //             color: #E78B5D;
+    //             border-radius: 4px;
+    //             border: 1.5px solid var(--warm_ceramics, #E78B5D);
+    //             background: var(--book-paper, #FAF1E4);
+    //             height: 4.07vh;
+    //             padding: 0px 0.83vw;
+    //             line-height: 4.07vh;
 
-                &:hover {
-                  transition: 0.3s;
-                  color: #fbe8c7;
-                  background-color: #f19b70;
-                }
-              }
-            }
+    //             &:hover {
+    //               transition: 0.3s;
+    //               color: #fbe8c7;
+    //               background-color: #f19b70;
+    //             }
+    //           }
+    //         }
 
-            h3 {
-              display: flex;
-              margin-bottom: 1.85vh;
-              margin-left: 1.04vw;
-            }
+    //         h3 {
+    //           display: flex;
+    //           margin-bottom: 1.85vh;
+    //           margin-left: 1.04vw;
+    //         }
             
 
-            .A_ImageArticle {
-              width: 36.98vw;
-              height: 31.85vh;
-              margin-bottom: 1.85vh;
-              margin-left: 1.04vw;
+    //         .A_ImageArticle {
+    //           width: 36.98vw;
+    //           height: 31.85vh;
+    //           margin-bottom: 1.85vh;
+    //           margin-left: 1.04vw;
 
-              img {
-                width: 36.98vw;
-                height: 31.85vh;
-              }
-            }
+    //           img {
+    //             width: 36.98vw;
+    //             height: 31.85vh;
+    //           }
+    //         }
 
-          }
-        }
-      }
-    }
+    //       }
+    //     }
+    //   }
+    // }
 
     //Стили для попкульт раздела
 
-    .C_MainPageCelebrity {
-      display: flex;
-      margin-top: 5vh;
-      overflow: hidden;
+    // .C_MainPageCelebrity {
+    //   display: flex;
+    //   margin-top: 5vh;
+    //   overflow: hidden;
+    //   align-content: flex-start;
+    //   justify-content: space-around;
+    //   align-items: flex-start;
       
-      .O_CardStar {
-        border-radius: 4px;
-        border: 1px solid var(--wise-owl, #CCBBA3);
+    //   .O_CardStar {
+    //     display: flex;
+    //     border-radius: 4px;
+    //     border: 1px solid var(--wise-owl, #CCBBA3);
+
+      
+    //     .M_Tags {
+    //       display: inline-flex;
+    //       gap: 0.42vw;
+    //       margin-bottom: 1.5vh;
+    //       margin-top: 1.85vh;
+    //       margin-left: 1.04vw;
+          
+
+    //       .A_Tag {
+    //         font-size: 1.38rem;
+    //         font-family: "HelveticaNeueCyr";
+    //         color: #E78B5D;
+    //         border-radius: 4px;
+    //         border: 1.5px solid var(--warm_ceramics, #E78B5D);
+    //         background: var(--book-paper, #FAF1E4);
+    //         height: 4.07vh;
+    //         padding: 0px 0.83vw;
+    //         line-height: 4.07vh;
+
+    //         &:hover {
+    //           transition: 0.3s;
+    //           color: #fbe8c7;
+    //           background-color: #f19b70;
+    //         }
+    //       }
+    //     }
+
+    //     .A_ImageSeleb1 {
+    //       width: 29.64vw;
+    //       height: 43.61vh;
+    //     }
+
+    //     h3 {
+    //       margin-top: 29.72vh;
+    //       margin-left: 1.04vw;
+    //       text-align: left;
+    //       width: 15vw;
+    //     }
 
         
-      }
+    //   }
+
+    //   .O_CardStarSecType {
+    //     margin-left: 1.56vw;
+    //     margin-top: 11.11vh;
+    //     display: flex;
+    //     flex-direction: column;
+    //     border-radius: 4px;
+    //     border: 1px solid var(--wise-owl, #CCBBA3);
+
+    //     .W_CardStarUpContent {
+    //       display: flex;
+    //       flex-direction: row;
+    //       gap: 1.3vw;
+
+    //       .A_ImageSeleb1 {
+    //         margin-bottom: 1.5vh;
+    //         margin-top: 1.85vh;
+    //         margin-right: 1.04vw;
+
+    //       }
+    //     }
+
+    //     .W_CardStarBottomContent {
+    //       width: 22vw;
+    //       margin-top: 6.2vh;
+    //       margin-left: 1.04vw;
+          
+    //       h3 {
+    //         text-align: left;
+    //         margin-bottom: 1.85vh;
+    //       }
+
+    //     }
+
+
+
+      
+    //     .M_Tags {
+    //       display: inline-flex;
+    //       gap: 0.42vw;
+    //       margin-bottom: 1.5vh;
+    //       margin-top: 1.85vh;
+    //       margin-left: 1.04vw;
+          
+
+    //       .A_Tag {
+    //         font-size: 1.38rem;
+    //         font-family: "HelveticaNeueCyr";
+    //         color: #E78B5D;
+    //         border-radius: 4px;
+    //         border: 1.5px solid var(--warm_ceramics, #E78B5D);
+    //         background: var(--book-paper, #FAF1E4);
+    //         height: 4.07vh;
+    //         padding: 0px 0.83vw;
+    //         line-height: 4.07vh;
+
+    //         &:hover {
+    //           transition: 0.3s;
+    //           color: #fbe8c7;
+    //           background-color: #f19b70;
+    //         }
+    //       }
+    //     }
+
+        
+    //   }
+    // }
+
+
+    // Стили для раздела с тестами
+
+    .Tests {
+      display: flex;
+      margin-top: 11.11vh;
+      margin-bottom: 16vh;
     }
+
+    // .A_TestSectIMG {
+    //   position: absolute;
+    //   z-index: -1;
+    // }
+
+    // .O_TestMain {
+    //   width: 39.06vw;
+    //   height: 37.96vh;
+    //   border-radius: 500px 500px 4px 4px;
+    //   border: 1.5px solid var(--wise-owl, #CCBBA3);
+    //   background: var(--book-paper, #FAF1E4);   
+    //   margin: 0 11.25vw 0 19.31vw; 
+
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+
+    //   cursor: pointer;
+
+    //   .M_TestTitle {
+    //     margin-top: 5vh;
+        
+    //     .A_TestTitle {
+    //       display: flex;
+    //       flex-direction: column;
+    //       align-items: center;        
+    //     }
+    //   }
+
+
+    //   .M_Tags {
+    //     display: inline-flex;
+    //     gap: 0.42vw;
+    //     margin-top: 3vh;
+        
+
+    //     .A_Tag {
+    //       font-size: 1.38rem;
+    //       font-family: "HelveticaNeueCyr";
+    //       color: #E78B5D;
+    //       border-radius: 4px;
+    //       border: 1.5px solid var(--warm_ceramics, #E78B5D);
+    //       background: var(--book-paper, #FAF1E4);
+    //       height: 4.07vh;
+    //       padding: 0px 0.83vw;
+    //       line-height: 4.07vh;
+
+    //       &:hover {
+    //         transition: 0.3s;
+    //         color: #fbe8c7;
+    //         background-color: #f19b70;
+    //       }
+    //     }
+    //   }
+    // }
+
+
 
 }

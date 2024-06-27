@@ -1,0 +1,77 @@
+body.aroma_atlas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--book_paper);
+
+  // .Q_LineHeader {
+  //   width: 100%;
+  //   border: 1px solid #CCBBA3;
+  // }
+
+  //   h2 {
+  //     color: var(--almost_black, #302b29);
+  //     /* h2 */
+  //     font-family: 'TT Livret Subhead';
+  //     font-size: 4rem;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: 100%; /* 64px */
+  //   }
+  //   h3 {
+  //     color: var(--almost-black, #302b29);
+  //     text-align: center;
+  //     /* h3_CardHeader */
+  //     font-family: 'TT Livret Subhead';
+  //     font-size: 2.6rem;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: 120%; /* 57.6px */
+  //   }
+  //   p {
+  //     color: var(--almost-black);
+  //     /* p_Maintext */
+  //     font-family: 'helveticaneuecyr_roman';
+  //     font-size: 1.38rem;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: 140%;
+
+  //     // Тут не надо хавер! а то у нас вообще весь текст красится на странице
+  //     // &:hover {
+  //     //   cursor: pointer;
+  //     //   color: var(--dusty_brick);
+  //     // }
+  //   }
+  //   a {
+  //     text-decoration: none;
+  //     color: var(--almost-black, #e78b5d);
+  //     font-family: 'HelveticaNeueCyr';
+  //     font-size: 1.6rem;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: 140%;
+  //     text-decoration: none;
+
+  //     &:hover {
+  //       cursor: pointer;
+  //       color: var(--dusty_brick, #e78b5d);
+  //     }
+  //   }
+
+  //   h4 {
+  //     color: var(--almost-black, #302b29);
+  //     /* H4_Filtration */
+  //     font-family: 'TT Livret Subhead';
+  //     font-size: 28px;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: normal;
+
+  //     &:hover {
+  //       cursor: pointer;
+  //       color: var(--dusty_brick);
+  //     }
+  //   }
+}

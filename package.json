@@ -1,5 +1,5 @@
 {
-  "name": "static-site-boilerplate",
+  "name": "scentify",
   "version": "1.0.0",
   "author": "Varvara&Ekaterina",
   "license": "False",
@@ -20,20 +20,23 @@
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-partials-plugin": "^0.8.0",
-    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.8.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",
     "postcss-preset-env": "^7.7.0",
     "sass": "^1.32.12",
     "sass-loader": "^11.0.1",
-    "webpack": "^5.33.2",
+    "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.11.0",
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "airtable": "^0.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/HSEADC/scentify.git"
 }

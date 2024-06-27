@@ -1,0 +1,198 @@
+// для всех на гл странице
+.SO_NotesMainPage {
+  width: 100%;
+  margin: 6vh 0;
+
+  .W_H2AllButton {
+    display: flex;
+    align-items: flex-end;
+    gap: 7.71vw;
+
+    .M_H2All {
+      margin-left: 20.05vw; //385px
+
+      .Q_H2AllText {
+        inherits: h2;
+        &.Line2 {
+          font-style: italic;
+          margin-left: 6.77vw; //130px
+        }
+
+        &.Line2_1 {
+          font-style: italic;
+          margin-left: 20vw; //389px
+        }
+      }
+    }
+  }
+
+  .PopCult {
+    gap: 13.8vw;
+  }
+
+  .Library {
+    gap: 6vw;
+  }
+}
+
+//Для футера на главной
+
+.SO_FooterMain {
+  width: 79.69vw;
+  height: 42.59vh;
+  border-top: 1px solid #ccbba3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .Q_Logo {
+    margin-top: 3.7vh;
+  }
+
+  .O_FooterTextInfo {
+    display: flex;
+    flex-direction: row;
+
+    .M_NewsFooter,
+    .M_Authors,
+    .M_Curators {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    // .M_NewsFooter :nth-child(2) {
+    //   margin-left: 50px;
+    // }
+
+    .M_NewsFooter {
+      & :nth-child(2) {
+        margin-left: 2.6vw;
+      }
+
+      & :nth-child(3) {
+        margin-left: 10.47vw;
+      }
+    }
+
+    .M_Authors {
+      margin-left: 17.88vw;
+      margin-right: 7.85vw;
+    }
+
+    .M_SocialIcons {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+      margin-left: 5.82vw;
+
+      img {
+        height: 40px;
+        width: 40px;
+      }
+
+      div {
+        height: 40px;
+        width: 40px;
+        background-color: aquamarine;
+      }
+    }
+
+    .M_Curators,
+    .M_Authors {
+      a {
+        color: #302b29;
+      }
+    }
+  }
+}
+
+.SO_FooterForAll {
+  margin-top: 3.13vh;
+  width: 79.69vw;
+  height: 28.06vh;
+  border-top: 1px solid #ccbba3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .Q_Logo {
+    margin-top: 3.7vh;
+  }
+
+  .O_FooterTextInfo {
+    display: flex;
+    flex-direction: row;
+
+    .M_Authors,
+    .M_Curators {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        text-decoration: none;
+        color: var(--almost_black, #302b29);
+
+        /* p */
+        font-family: 'Helvetica Neue';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 30.8px */
+      }
+    }
+
+    .M_Authors {
+      margin-left: 17.88vw;
+      margin-right: 7.85vw;
+    }
+
+    .M_SocialIcons {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+      margin-left: 5.82vw;
+
+      img {
+        height: 40px;
+        width: 40px;
+      }
+
+      div {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .M_Curators,
+    .M_Authors {
+      a {
+        color: #302b29;
+      }
+    }
+  }
+}
+
+.SO_ContentArt {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  margin-bottom: 9.26vh;
+
+
+  .O_ContentLeft { grid-area: 1 / 1 / 2 / 3; }
+  .O_ContentRight { grid-area: 1 / 3 / 2 / 6; }
+  }
+  
+  
+
+
+

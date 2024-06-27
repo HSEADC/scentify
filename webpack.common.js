@@ -6,9 +6,12 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
 
+// при создании нового чанка сюда дописать
 module.exports = {
   entry: {
     index: './src/index.js',
+    searchVanilla: './src/search_vanilla.js',
+    reactBasics: './src/react_basics.jsx',
     page: './src/page.jsx'
   },
   output: {
@@ -84,7 +87,6 @@ module.exports = {
     //   ]
     // }),
 
-
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -98,7 +100,6 @@ module.exports = {
       filename: './index.html',
       chunks: ['index']
     }),
-
 
     //  Guideline
     // new HtmlWebpackPlugin({
@@ -117,19 +118,55 @@ module.exports = {
 
     // раздел атлас ароматов
     new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/aroma_atlas.html',
+      filename: './aroma_atlas.html',
+      chunks: ['index']
     }),
 
-    // HeaderMenu chunk
+    // раздел статей
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',
       chunks: ['index']
     }),
+
+    // внутряки для статей
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesHYGGE.html',
+      filename: './ARTICLES/articlesHYGGE.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSPRING.html',
+      filename: './ARTICLES/articlesSPRING.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesLESSSTRESS.html',
+      filename: './ARTICLES/articlesLESSSTRESS.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesNOTESandACCORDS.html',
+      filename: './ARTICLES/articlesNOTESandACCORDS.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSUMMER.html',
+      filename: './ARTICLES/articlesSUMMER.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/ARTICLES/articlesSELFMADE.html',
+      filename: './ARTICLES/articlesSELFMADE.html',
+      chunks: ['index']
+    }),
+
     // раздел поп-культура
     new HtmlWebpackPlugin({
       template: './src/pop_culture.html',
@@ -141,6 +178,19 @@ module.exports = {
       template: './src/tests.html',
       filename: './tests.html',
       chunks: ['index']
+    }),
+    // и здесь подключать новый чанк
+    // chunk searchVanilla
+    new HtmlWebpackPlugin({
+      template: './src/search_vanilla.html',
+      filename: './search_vanilla.html',
+      chunks: ['searchVanilla']
+    }),
+    // chunk reactBasics
+    new HtmlWebpackPlugin({
+      template: './src/react_basics.html',
+      filename: './react_basics.html',
+      chunks: ['reactBasics']
     }),
 
     // Article
@@ -154,6 +204,25 @@ module.exports = {
         priority: 'replace'
       }
     ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer_for_index.html'),
+        location: 'footer_for_index',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer_for_all.html'),
+        location: 'footer_for_all',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/header.html'),
