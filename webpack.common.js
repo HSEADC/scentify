@@ -12,6 +12,7 @@ module.exports = {
     index: './src/index.js',
     searchVanilla: './src/search_vanilla.js',
     reactBasics: './src/react_basics.jsx',
+    filterpopcult: './src/javascript/pop_cilture_filtration.js',
     page: './src/page.jsx'
   },
   output: {
