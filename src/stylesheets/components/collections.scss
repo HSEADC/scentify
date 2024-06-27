@@ -468,5 +468,52 @@
     .O_CardChar:nth-of-type(3) { grid-area: 1 / 7 / 2 / 10; }
     .O_CardChar:nth-of-type(4) { grid-area: 1 / 10 / 2 / 13; }
 }
+
+.C_TestShowcase {
+  margin-top: 3.33vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  align-content: start;
+
+  h1 {
+    margin-top: 1.67vw;
+  }
+
+  .M_Tags {
+    justify-content: start;
+  }
+
+  p {
+    margin-top: 2.5vw;
+  }
+
+  .A_buttonPrimary {
+    display: flex;
+    width: 220px;
+    height: 60px;
+    max-width: 490px;
+    padding: 14px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    margin-top: 3.44vw;
+
+    a {
+      text-decoration: none;
+      color: var(--paper_card, #FFFBF4);
+      text-align: center;    
+    }
+
+    }
+
+
+    
+  .A_TestShow { grid-area: 1 / 1 / 2 / 7; }
+  .W_TestShowDescr { grid-area: 1 / 8 / 2 / 13; }
+}
   
   
