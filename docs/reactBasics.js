@@ -493,13 +493,11 @@ if (true) {
 /************************************************************************/
 var __webpack_exports__ = {};
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(540);
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(338);
-// EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(961);
-;// CONCATENATED MODULE: ./src/javascript/ComponentExample.jsx
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(540);
+;// CONCATENATED MODULE: ./src/react_basics/A_Title.jsx
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -512,34 +510,114 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-
-var ComponentExample = /*#__PURE__*/function (_Component) {
-  _inherits(ComponentExample, _Component);
-  var _super = _createSuper(ComponentExample);
-  function ComponentExample(props) {
-    _classCallCheck(this, ComponentExample);
-    return _super.call(this, props);
+var A_Title = /*#__PURE__*/function (_React$Component) {
+  _inherits(A_Title, _React$Component);
+  var _super = _createSuper(A_Title);
+  function A_Title() {
+    _classCallCheck(this, A_Title);
+    return _super.apply(this, arguments);
   }
-  _createClass(ComponentExample, [{
+  _createClass(A_Title, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react.createElement("h1", {
+        className: "A_Title"
+      }, this.props.title);
+    }
+  }]);
+  return A_Title;
+}(react.Component);
+
+;// CONCATENATED MODULE: ./src/react_basics/M_Card.jsx
+function M_Card_typeof(obj) { "@babel/helpers - typeof"; return M_Card_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, M_Card_typeof(obj); }
+function M_Card_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function M_Card_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function M_Card_createClass(Constructor, protoProps, staticProps) { if (protoProps) M_Card_defineProperties(Constructor.prototype, protoProps); if (staticProps) M_Card_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function M_Card_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) M_Card_setPrototypeOf(subClass, superClass); }
+function M_Card_setPrototypeOf(o, p) { M_Card_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return M_Card_setPrototypeOf(o, p); }
+function M_Card_createSuper(Derived) { var hasNativeReflectConstruct = M_Card_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = M_Card_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = M_Card_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return M_Card_possibleConstructorReturn(this, result); }; }
+function M_Card_possibleConstructorReturn(self, call) { if (call && (M_Card_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return M_Card_assertThisInitialized(self); }
+function M_Card_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function M_Card_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function M_Card_getPrototypeOf(o) { M_Card_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return M_Card_getPrototypeOf(o); }
+
+
+var M_Card = /*#__PURE__*/function (_React$Component) {
+  M_Card_inherits(M_Card, _React$Component);
+  var _super = M_Card_createSuper(M_Card);
+  function M_Card() {
+    M_Card_classCallCheck(this, M_Card);
+    return _super.apply(this, arguments);
+  }
+  M_Card_createClass(M_Card, [{
     key: "render",
     value: function render() {
       return /*#__PURE__*/react.createElement("div", {
-        className: "ComponentExample"
-      }, "This is a React component");
+        className: "M_Card"
+      }, /*#__PURE__*/react.createElement(A_Title, {
+        title: this.props.title
+      }), /*#__PURE__*/react.createElement("p", null, this.props.desctiption));
     }
   }]);
-  return ComponentExample;
+  return M_Card;
 }(react.Component);
 
-;// CONCATENATED MODULE: ./src/page.jsx
+;// CONCATENATED MODULE: ./src/react_basics/O_Container.jsx
+function O_Container_typeof(obj) { "@babel/helpers - typeof"; return O_Container_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, O_Container_typeof(obj); }
+function O_Container_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function O_Container_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function O_Container_createClass(Constructor, protoProps, staticProps) { if (protoProps) O_Container_defineProperties(Constructor.prototype, protoProps); if (staticProps) O_Container_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function O_Container_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) O_Container_setPrototypeOf(subClass, superClass); }
+function O_Container_setPrototypeOf(o, p) { O_Container_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return O_Container_setPrototypeOf(o, p); }
+function O_Container_createSuper(Derived) { var hasNativeReflectConstruct = O_Container_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = O_Container_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = O_Container_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return O_Container_possibleConstructorReturn(this, result); }; }
+function O_Container_possibleConstructorReturn(self, call) { if (call && (O_Container_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return O_Container_assertThisInitialized(self); }
+function O_Container_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function O_Container_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function O_Container_getPrototypeOf(o) { O_Container_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return O_Container_getPrototypeOf(o); }
+
+
+
+var workshops = [{
+  date: '16 april 2024',
+  title: 'React basics workshop 08'
+}, {
+  date: '16 april 2024',
+  title: 'React basics workshop 09'
+}];
+var O_Container = /*#__PURE__*/function (_React$Component) {
+  O_Container_inherits(O_Container, _React$Component);
+  var _super = O_Container_createSuper(O_Container);
+  function O_Container() {
+    O_Container_classCallCheck(this, O_Container);
+    return _super.apply(this, arguments);
+  }
+  O_Container_createClass(O_Container, [{
+    key: "render",
+    value: function render() {
+      var cards = workshops.map(function (workshop, i) {
+        return /*#__PURE__*/react.createElement(M_Card, {
+          key: i,
+          title: workshop.title,
+          desctiption: workshop.date
+        });
+      });
+      return /*#__PURE__*/react.createElement("div", {
+        className: "O_Container"
+      }, /*#__PURE__*/react.createElement(A_Title, {
+        title: "Title"
+      }), cards);
+    }
+  }]);
+  return O_Container;
+}(react.Component);
+
+;// CONCATENATED MODULE: ./src/react_basics.jsx
 
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  var container = document.getElementById('reactComponentRoot');
-  var root = (0,client/* createRoot */.H)(container);
-  root.render( /*#__PURE__*/react.createElement(ComponentExample, null));
-});
+document.body.innerHTML = '<div id="app"></div>';
+var root = (0,client/* createRoot */.H)(document.querySelector('#app'));
+root.render( /*#__PURE__*/react.createElement(O_Container, null));
 /******/ })()
 ;
