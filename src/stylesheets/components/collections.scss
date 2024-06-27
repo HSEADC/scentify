@@ -446,5 +446,27 @@
 
 
 }
+
+
+.C_BlockCharacters {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  margin-top: 30px;
+
+  .O_CardChar {
+    width: 360px;
+    height: 687px;
+    border-radius: 4px;
+    background: var(--paper_card, #FFFBF4);
+    }
+    
+    .O_CardChar { grid-area: 1 / 1 / 2 / 4; }
+    .O_CardChar:nth-of-type(2) { grid-area: 1 / 4 / 2 / 7; }
+    .O_CardChar:nth-of-type(3) { grid-area: 1 / 7 / 2 / 10; }
+    .O_CardChar:nth-of-type(4) { grid-area: 1 / 10 / 2 / 13; }
+}
   
   

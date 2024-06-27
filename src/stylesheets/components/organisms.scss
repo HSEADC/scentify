@@ -470,3 +470,25 @@
     margin-bottom: 24px;
   }
 }
+
+.O_CardChar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+
+
+  .M_Tags {
+    justify-content: left;
+  
+  }
+  
+  .A_CharImg {
+    justify-content: center;
+    margin-right: 16px;
+  }
+
+  .A_CharTitle {
+    margin-top: 70px;
+  }
+}
