@@ -81,18 +81,18 @@ module.exports = {
   },
   plugins: [
     // спросить что это такое!!!1!
-    // new CopyPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, 'src/share/'),
-    //       to: path.resolve(__dirname, 'dev_build/share/')
-    //     },
-    //     {
-    //       from: path.resolve(__dirname, 'src/share/'),
-    //       to: path.resolve(__dirname, 'docs/share/')
-    //     }
-    //   ]
-    // }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'dev_build/share/')
+        },
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'docs/share/')
+        }
+      ]
+    }),
 
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -128,7 +128,14 @@ module.exports = {
     //   chunks: ['index']
     // }),
     
-    
+    // ошибка 404
+    new HtmlWebpackPlugin({
+      template: './src/err404.html',
+      filename: './err404.html',
+      chunks: ['index', 'header', 'footer']
+    }),
+
+
     // раздел атлас ароматов
     new HtmlWebpackPlugin({
       template: './src/aroma_atlas.html',

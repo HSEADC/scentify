@@ -23,7 +23,7 @@ import styles from './stylesheets/footer.module.scss';
 
 const A_Footer = () => {
   return (
-    <div class="SO_FooterForAll" className={styles['SO_FooterForAll']}>
+ <div class="SO_FooterForAll" className={styles['SO_FooterForAll']}>
   <div class="Q_Logo">
     <svg
       width="150"
@@ -96,7 +96,7 @@ const A_Footer = () => {
       </div>
     </div>
   </div>
-    </div>
+ </div>
 
 
 
